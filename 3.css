@@ -1,0 +1,36 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+#tweets, #replies, #search, #messages{
+	float: left;
+	width: 25%;
+	height: 645px;
+}
+
+#tweets{
+	background-color: #a0ddce;
+}
+
+#replies{
+	background-color: #f7cf2f;
+}
+
+#search{
+	background-color: #697989;
+}
+
+#messages{
+	background-color: #51ace5;
+}
+
+p{
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 15px;
+}
