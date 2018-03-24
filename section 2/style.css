@@ -1,0 +1,26 @@
+
+footer{
+	color: green;
+	font-size: 3em;
+}
+
+header{
+	font-size: 30px;
+}
+
+aside{
+	font-size: 200%;
+}
+
+section ul li{
+	color: red;
+}
+
+footer ul li{
+	color: red!important;
+}
+
+
+footer ul li{
+	color: green;
+}

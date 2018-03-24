@@ -1,0 +1,14 @@
+1. git clone <repo-link> (1 l?n duy nh?t)
+2. git pull
+3. git add .
+git add example1.html
+4. git commit -am "n?i dung mình dã code"
+5. git push
+
+
+branch 
+branch m?c d?nh luoonc ó là branch master
+
+t?o ssh
+m? cmd lên 
+ssh-keygen

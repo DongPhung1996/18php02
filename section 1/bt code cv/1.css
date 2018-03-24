@@ -1,0 +1,110 @@
+*{margin: 0; padding: 0;}
+
+
+
+/*Css phan header*/
+
+#header,
+#body{
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+
+.name{
+	padding-top: 0px;
+	float: left;
+	width: 30%;
+	text-transform: uppercase;
+	color: #108075;
+}
+
+.worker{
+	float: right;
+	height: 35px;
+	padding-top: 5px;
+	background-color: #108075;
+	width: 70%;
+	text-align: right;
+	color: white;
+}
+
+.worker h2{
+		padding-right: 5px;
+}
+
+/*Ket thuc css phan header*/
+
+.left-1{
+	float: left;
+	width: 30%;
+}
+
+.right-1{
+	padding-top: 14px;
+	float: right;
+	width: 70%;
+	line-height: 25px;
+}
+
+.left{
+	float: left;
+	width: 40%;
+}
+
+.right{
+	float: right;
+	width: 60%;
+}
+div canvas{
+	width: 465px;
+	height: 20px;
+}
+
+.row{
+	padding-top: 30px;
+}
+
+/*Phan left 1*/
+
+.left-2{
+	height: 376.563px;
+	width: 240px;
+	background-color: #108075;
+	color: white;
+	padding-left: 15px;
+}
+
+.left-2 .info{
+	padding-top: 10px;
+	line-height: 25px;
+	padding-bottom: 20px;
+}
+
+.left-2 .info .info-1{
+	color: #c7b6b6;
+}
+
+.left-2 .muctieu h3{
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+
+/*Phan right 1*/
+
+.right-1 .left h3{
+	text-transform: uppercase;
+}
+
+.right-1 .row .left p{
+	font-weight: bold;
+	color: black;
+}
+
+.right-1 p{
+	color: #9c8383;
+}
+

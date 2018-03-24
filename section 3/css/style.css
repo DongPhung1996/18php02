@@ -1,0 +1,308 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*bat dau the head*/
+	#header, #footer {
+		width: 98.5%;
+		height: 100px;
+		background-color: #9a9aeabd;
+		margin-bottom: 20px;
+		margin: 10px 10px 10px 10px;
+	}
+
+	.brand, .tools, .global{
+		width: 50px;
+		line-height: 50px;
+		float: left;
+		background-color: #f5d8d880;
+		margin: 10px 10px 10px 10px;
+		text-align: center;
+	}
+
+	.brand{
+		margin-left: 20px;
+	}
+
+	.brand, .tools{
+		width: 22%;
+	}	
+
+	.global{
+		width: 50%;
+	}
+
+	/*het the head*/
+
+	/*bat dau the hero*/
+	#hero, #ad{
+		background-color: #9a9aeabd;
+		height: 150px;
+		float: left;
+		margin: 10px 10px 10px 10px;
+	}
+
+	#hero{
+			width: 75%;
+	}
+
+	.feoture, .action{
+		height: 100px;
+		margin: 10px 10px 10px 10px;
+		background-color: #f5d8d880;
+		float: left;
+		line-height: 100px;
+		text-align: center;
+	}
+
+	.feoture{
+		width: 70%;
+	}
+
+	.action{
+		width: 25.3%;
+	}
+
+	/*ket thuc the hero*/
+
+
+	/*bat dau the ad*/
+	#ad{
+		width: 22%;
+		line-height: 150px;
+		text-align: center;
+		background-color: #4a4abfbd;
+	}
+	/*ket thuc the ad*/
+
+	/*bat dau the body*/
+	#body, #sidebar{
+		
+		background-color: #9a9aeabd;
+		height: 400px;
+		float: left;
+		margin: 10px 10px 10px 10px;
+	}
+
+	#body{
+		width: 75%;
+	}
+
+	.fedture, .lieting{
+		height: 350px;
+		margin: 10px 10px 10px 10px;
+		background-color: #f5d8d880;
+		float: left;
+		line-height: 350px;
+		text-align: center;
+	}
+
+	.fedture{
+		width: 22%;
+	}
+
+	.lieting{
+		width: 74%;
+	}
+	/*ke thuc the body*/
+	#sidebar{
+		width: 22%;	
+	}
+
+	.slide{
+		height: 350px;
+		margin: 10px 10px 10px 10px;
+		background-color: #f5d8d880;
+		line-height: 350px;
+		text-align: center;
+	}
+
+	/*footer tuong tuong tu header*/
+
+	#both{
+		clear: both;
+	}
+	#footer{
+		margin-top: 610px;
+
+	}
+@media screen and(max-width: 1024px)
+{
+	.brand, .tools{
+		width: 21%;
+	}
+	.action{
+		width: 24.3%;
+	}
+	#ad{
+		width: 21%;
+	}
+	.lieting{
+		width: 72%;
+	}
+	#sidebar{
+		width: 21%;
+	}
+}	
+
+
+@media screen and (max-width: 768px)
+{
+	#header{
+		width: 98%;
+	}
+	.brand, .tools{
+		width: 20%;
+	}	
+	.feoture {
+	    width: 98%;
+	    height: 57px;
+	    line-height: 57px;
+	}
+	#hero{
+		width: 98%;
+	    background-color: #9a9aeabd;
+	    height: 160px;
+	    float: left;
+	    margin: 10px 10px 10px 10px;
+	}
+	.action {
+	    width: 98%;
+	    height: 35px;
+	    line-height: 35px;
+	}
+	#ad{
+		z-index: 1;
+		position: absolute;
+		margin-top: 227px;
+		margin-left: 585px;
+		width: 18%;
+	}
+	#body{
+
+	
+		width: 98%;
+		height: 520px;
+	}
+
+	.fedture {
+	    width: 74%;
+	    height: 150px;
+	    margin: 10px 10px 10px 10px;
+	    background-color: #f5d8d880;
+	    line-height: 150px;
+	    text-align: center;	
+	}
+
+	.lieting {
+	    height: 300px;
+	    width: 98%;
+	    margin: 10px 10px 10px 10px;
+	    background-color: #f5d8d880;   
+	    line-height: 300px;
+	    text-align: center;	
+	}
+
+	#sidebar{
+		width: 98%;	
+	}
+
+	.slide{
+		height: 350px;
+		margin: 10px 10px 10px 10px;
+		background-color: #f5d8d880;
+		line-height: 350px;
+		width: 98%;
+		text-align: center;
+	}
+
+	#footer{
+		margin-top: 1150px;
+	}
+
+@media screen and (max-width: 480px)
+{
+	#header, #hero{
+		width: 98%;
+	}
+	.brand{
+		width: 88%;
+		height: 20px;
+		line-height: 20px;
+	}	
+	.tools, .global{
+		width: 41%;
+		height: 20px;
+		float: left;
+		line-height: 20px;
+		margin-top: 0px;
+	}
+
+	.global{
+		margin-left: 20px;
+	}
+
+	.tools{
+		margin-right: 0px;
+		margin-left: 8px;
+	}
+
+	#hero{
+		height: 55px;
+	}
+	.feoture{
+		z-index: 1;
+		position: absolute;
+		opacity: 0;
+	}
+	
+	.action{
+		width: 88%;
+		height: 20px;
+		line-height: 20px;
+		margin: 0;
+		margin-left: 20px;	
+	}
+	#body{
+		height: 200px;
+	}
+
+	.fedture{
+		width: 88%;
+	    height: 35px;
+	    margin: 10px 10px 10px 20px;
+	    background-color: #f5d8d880;
+	    line-height: 35px;
+	    text-align: center;
+	}
+
+	#ad{
+	    margin-top: 168px;
+	    margin-left: 30px;
+	    width: 86%;
+	    line-height: 42px;
+	    text-align: center;
+	    background-color: #4a4abfbd;
+	    height: 42px;
+	}
+
+	.lieting {
+	    height: 40px;
+	    width: 88%;
+	    margin: 55px 10px 10px 20px;
+	    background-color: #f5d8d880;
+	    line-height: 40px;
+	    text-align: center;
+	}
+	#sidebar{
+		opacity: 0;
+		position: absolute;
+		z-index: 1;
+	}
+	#footer{
+		margin-top: 305px;
+		height: 50px;
+	}
+}
+

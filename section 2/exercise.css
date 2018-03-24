@@ -1,0 +1,37 @@
+image{
+	float: left;
+}
+
+nav{
+	float: right;
+	text-align: center;
+	padding-right: 400px;
+	
+}
+
+nav h1{
+	color: orange;
+	font-size: 30px;
+	text-shadow: 2px 2px black;
+}
+
+nav h2{
+	color: green;
+}
+
+ul li a{
+	color: gray;
+}
+
+.link a{
+	color: green;
+	font-weight: bold;
+}
+
+article .text-1{
+	text-indent: 40px;
+}
+
+footer .text-copy{
+	text-align: right;
+}
