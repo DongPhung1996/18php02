@@ -1,0 +1,99 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#container{
+	border: 1px solid black;
+	margin: 20px 10px 20px 10px;
+}
+
+#head{
+	border-bottom: 1px solid black;
+	height: 100px;
+}
+
+.head1, .head2{
+	 width: 49%;
+	 height: 100px;
+	 float: left;
+	 text-align: center;
+	 line-height: 100px;
+}
+
+.head2{
+	border-left: 1px solid black;
+}
+
+#nav{
+	height: 100px;
+	border-bottom: 1px solid black;
+}
+
+.nav-1, .nav-2, .nav-3, .nav-4{
+	border-left: 1px solid black;
+	width: 24.4%;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	height: 100px;
+}
+
+.nav-1{
+	border-left: 0px;
+}
+
+#content{
+	height: 200px;
+	clear: both;
+}
+
+.content-1{
+	width: 24.5%;
+	float: left;
+	height: 200px;
+	border-right: 1px solid black;
+}
+
+.content-1, .content-2{
+	text-align: center;
+	line-height: 200px;
+}
+
+@media screen and (max-width: 768px)
+{
+	.nav-1, .nav-2, .nav-3, .nav-4{
+		width: 49%;
+	}
+	.nav-3, .nav-4{
+		border-bottom: 1px solid black;
+	}
+	.nav-3{
+		border-left: 0px;
+	}
+}
+
+@media screen and (max-width: 320px){
+	.head1, .head2,.nav-1, .nav-2, .nav-3, .nav-4,
+	 .content-1, .content-2{
+	 	width: 98%;
+	}
+	.head2{
+		border-left: 0px;
+	}
+	.nav-2, .nav-4{
+		border-left: 0px;
+	}
+
+	.nav-1, .nav-2{
+		border-bottom: 1px solid black;
+	}
+	.content-1{
+		border-right: 0px;
+		border-bottom: 0px;
+	}
+	.content-2{
+		border: 1px solid black;
+		clear: both;
+	}
+}
