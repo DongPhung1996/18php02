@@ -1,0 +1,184 @@
+
+	#div-1{
+		float: left;
+		width: 15%;
+	}
+
+
+	#A, #B{
+		margin: 20px;
+	}
+	#A{
+		background-color: pink;
+		width: 74%;
+		float: left;
+		height: 50px;
+	}
+
+	#B{
+		background-color: blue;
+		width: 72%;
+		height: 50px;
+		float: left;
+	}
+
+	#C, #C_2{
+		margin: 20px;
+		height: 378px;
+	}
+
+	#C{
+		width: 75%;	
+		background-color: green;
+		clear: both;
+		float: left;
+	}
+
+	#C_2{
+		width: 77%;
+		float: left;
+	}
+
+	#D{
+		width: 31.4%;
+		height: 250px;
+		float: left;
+		background-color: pink;
+	}
+
+	#E_1, #E_2, #E_3, #E_4, #E_5, #E_6, #E_7, #E_8,#E_9, #E_10, #E_11, #E_12, #E_13, #E_14{
+		 float: left;
+	    background-color: gray;
+	    width: 14%;
+	    height: 120px;
+	    margin: 9px;
+	    margin-top: 0;
+	}
+
+	#left-bot{
+		margin-left: 15px;
+	}
+
+@media screen and(max-width: 1024px)
+{
+	#div-1{
+		float: left;
+		width: 15%;
+	}
+
+
+	#A, #B{
+		margin: 20px;
+	}
+	#A{
+		background-color: pink;
+		width: 74%;
+		float: left;
+		height: 50px;
+	}
+
+	#div-1 #B{
+		background-color: blue;
+		width: 74%;
+		height: 50px;
+		float: left;
+	}
+
+	#C, #C_2{
+		margin: 20px;
+		height: 378px;
+	}
+
+	#C{
+		width: 75%;	
+		background-color: green;
+		clear: both;
+		float: left;
+	}
+
+	#C_2{
+		width: 77%;
+		float: left;
+	}
+
+	#D{
+		width: 31.4%;
+		height: 250px;
+		float: left;
+		background-color: pink;
+	}
+
+	#E_1, #E_2, #E_3, #E_4, #E_5, #E_6, #E_7, #E_8,#E_9, #E_10, #E_11, #E_12, #E_13, #E_14{
+		 float: left;
+	    background-color: gray;
+	    width: 14%;
+	    height: 120px;
+	    margin: 9px;
+	    margin-top: 0;
+	}
+
+	#left-bot{
+		margin-left: 15px;
+	}
+}
+
+@media screen and(max-width: 768px)
+{
+	#div-1{
+		width: 100%;
+		float: left;
+	}
+	#A{
+		width: 20%;
+		float: left;
+	}
+	#C{
+		width: 74%;
+		float: left;
+		height: 50px;
+		clear: none;
+		float: right;
+	}
+	#B{
+		width: 74%;
+	}
+}
+
+@media screen and (max-width: 320px){
+	#div-1{
+		width: 100%;
+		z-index: 2;
+		position: relative;
+	}
+	#A{
+		width: 88%;
+		float: left;
+		margin-top: 100px;
+		position: absolute;
+	}
+	#C{
+		width: 20%;
+		height: 50px;
+		clear: none;	
+		float: right;		
+	}
+	#B{
+		width: 88%;
+		z-index: 1;
+		position: absolute;
+	}
+	#B{
+		width: 83%;
+	}
+	#C_2{
+		margin-top: 90px;		
+	}
+	#D{
+		width: 115%;
+	}
+	#E_1, #E_2, #E_3, #E_4, #E_5, #E_6, #E_7, #E_8,#E_9, #E_10, #E_11, #E_12, #E_13, #E_14{
+		width: 115%;
+		margin-top: 10px;
+		margin-left: 0px;
+	}
+}
