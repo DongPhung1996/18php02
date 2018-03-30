@@ -1,0 +1,315 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*bat dau the info*/
+#info{
+	width: 100%;
+	height: 30px;
+	background-color: #bbb0b052;
+}
+
+.phone, .email{
+	width: 48%;
+	float: left;
+	color: orange;
+	line-height: 30px;
+	text-align: center;
+}
+
+/*Ket thuc the info*/
+
+/*bat dau the banner*/
+#banner{
+	width: 100%;
+	height: 100px;
+}
+
+.logo, .menu{
+	float: left;
+}
+
+.logo{
+	width: 35%;
+	padding-left: 60px;
+}
+
+.logo img{
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding-left: 50px;
+}
+
+.logo p{
+	float: left;
+	line-height: 100px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-family: Arial;
+	color: green;
+}
+
+.menu{
+	width: 60%;
+	margin-top: 25px;
+}
+
+.menu ul{
+	position: relative;
+}
+.menu ul li{
+	width: 160px;
+	float: left;
+	line-height: 50px;
+	list-style: none;
+	text-align: center;
+	background-color: #fff;
+}
+
+.menu ul li a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: gray;
+}
+
+.menu ul ul{
+	display: none;
+	position: absolute;
+}
+
+.menu ul ul li{
+	float: none;
+	line-height: 50px;
+}
+
+.menu ul li:hover > ul{
+	display: block;
+}
+
+.menu > ul::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.menu ul li:hover{
+	background-color: orange;
+}
+
+
+/*Het the banner*/
+
+/*Bat dau the slide*/
+
+#slide{
+	width: 100%;
+	height: 500px;
+}
+
+#slide img{
+	width: 100%;
+	height: 500px;
+}
+
+/*Ket thuc the slide*/
+
+/*bat dau the welcome*/
+
+#welcome{
+	width: 100%;
+	margin: auto;
+	height: 100px;
+	text-align: center;
+	padding-top: 50px;
+	border-bottom: 1px solid #f1e2e2;
+}
+
+#welcome p:first-child{
+	text-align: center;
+	font-size: 30px;
+}
+
+#welcome span{
+	color: orange;
+}
+
+/*Ket thuc the welcome*/
+
+/*bat dau the side*/
+
+#side{
+	margin-top: 20px;
+	width: 100%;
+	height: 220px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #f1e2e2;
+}
+
+
+#side .side-1 img{
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding: 10px;
+	padding-top: 0px;
+}
+
+#side .side-1  button{
+	width: 100px;
+	height: 30px;
+	margin-top: 30px;
+	color: white;
+	background-color: orange;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 1px solid orange;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#side .side-1{
+	border: 1px solid #f1e2e2;
+	float: left;
+	width: 30%;
+	padding: 10px;
+	margin: 10px;
+}
+
+/*ket thuc the side*/
+
+/*Bat dau the tbody*/
+
+
+#tbody{
+	width: 100%;
+	height: 1000px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.left{
+	width: 25%;
+	height: 400px;
+	background-color: #f1e5e57d;
+	float: left;
+	margin-left: 30px;
+	border-radius: 10px;
+	border: 1px solid #f1e5e57d;
+}
+
+.left h2{
+	font-size: 30px;
+	margin: 10px;
+	color: green;
+}
+
+.list-group-1 ul li{
+	height: 20px;
+	list-style: none;
+	padding: 10px;
+	border-bottom: 1px solid #d8e4d8;
+	margin: 10px;
+}
+
+.list-group-1 ul li a{
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+}
+
+.list-group-1 ul li:hover{
+	background-color: green;
+
+}
+
+.list-group-1 ul li a:hover{
+	color: #fff;
+}
+
+
+
+.right{
+	width: 70%;
+	background-color: #fff;
+	float: left;
+	border: 1px solid green;
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.right h2{
+	font-size: 30px;
+	margin: 10px;
+	color: green;
+}
+
+.list-1 h3{
+	 color: #1cda1c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.list-1 {
+    padding: 20px;
+    border: 1px solid #f1e2e2;
+    border-radius: 10px;
+    margin: 10px;
+    line-height: 30px;
+}
+
+.list-1 button{
+	text-align: center;
+	background-color: green;
+	width: 100px;
+	height: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 1px solid green;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+
+.list-1 img{
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding: 10px;
+}
+
+/*het the tbody*/
+
+/*Bat dau the footer*/
+
+#footer{
+	width: 100%;
+	height: 150px;
+	background-color: #f1e5e57d;
+	clear: both;
+}
+
+#footer img, #footer .abourt{
+	float: left;
+}
+
+
+#footer img{
+	width: 100px;
+	height: 100px;
+	 margin-top: 30px;
+    border-left-width: 200px;
+    margin-left: 250px;
+}
+
+#footer .abourt{
+	border-left: 2px solid #e6d5d5;
+    margin: 30px;
+    padding: 12px;
+    padding-left: 20px;
+}
