@@ -1,0 +1,29 @@
+ul{
+	list-style-type: upper-roman;
+}
+
+ul li{
+	padding: 10px;
+	border: 1px solid black;
+	list-style: none;
+	margin: 10px;
+	float: left;
+	width: 100px;
+	text-align: center;
+
+}
+
+a{
+		text-decoration: none;
+		color: green;
+}
+
+ul ul{
+	display: none;
+	
+}
+
+ul li.hide:hover ul{
+	display: block;
+}
+
