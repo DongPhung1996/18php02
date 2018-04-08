@@ -1,0 +1,361 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>bt làm form</title>
+		<link rel="shortcut icon" type="" href="images/ghost.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Latest compiled and minified JavaScript -->
+	</head>
+	<body>
+		<div id="head">
+			<div class="row header">
+				<div class="col-md-1 menu" align="right"><i class="fas fa-align-left fa-2x"></i></div>
+				<div class="col-md-5 logo">
+					<h1>Bys.sales</h1>
+				</div>
+				<div class="col-md-4 buy" align="right">
+					<i class="fas fa-shopping-cart fa-2x"></i>
+				</div>
+				<div class="col-md-2 nv" align="right">
+					<p>Nhân viên bán hàng</p>
+				</div>
+			</div>
+			
+			<!-- <div id="content">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-2" align="right" style="padding-top: 5px; padding-right: 0;">
+								<button style="border-radius: 15px; width: 30px; height: 30px; background-color: #45d245; color: #fff;">1</button>
+							</div>
+							<div class="col-md-6" style="padding-right: 0px;">
+								<p style="padding-top: 10px; padding-right: 0px;">Thông tin sản phẩm</p>
+							</div>
+							<div class="col-md-4" style="border-bottom: 5px solid #45d245; padding-top: 18px;">
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-2" align="right" style="padding-top: 5px; padding-right: 0;">
+								<button style="border-radius: 15px; width: 30px; height: 30px; background-color: #45d245; color: #fff;">2</button>
+							</div>
+							<div class="col-md-6" style="padding-right: 0px;">
+								<p style="padding-top: 10px;">Thông tin khách hàng</p>
+							</div>
+							<div class="col-md-4" style="border-bottom: 5px solid gray; padding-top: 18px;">
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-2" align="right" style="padding-top: 5px; padding-right: 0;">
+								<button style="border-radius: 15px; width: 30px; height: 30px; background-color: gray; color: #fff;">3</button>
+							</div>
+							<div class="col-md-6">
+								<p style="padding-top: 10px">Xác nhận</p>
+							</div>
+							<div class="col-md-4" style="border-bottom: 5px solid gray; padding-top: 18px;">
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-2" align="right" style="padding-top: 5px; padding-right: 0;">
+								<button style="border-radius: 15px; width: 30px; height: 30px; background-color: gray; color: #fff;">4</button>
+							</div>
+							<div class="col-md-6">
+								<p style="padding-top: 10px">Tạo đơn hàng</p>
+							</div>
+							<div class="col-md-4" >
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div> -->
+
+
+		<div class="all">
+			<div class="container">
+				<div class="form">
+					<h1>Thông tin khách hàng</h1>
+					<div class="info">
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Thông tin khách hàng</p>
+							</div>
+							<div class="col-md-4">
+								<select class="form-control">
+									<option>Annie Brown</option>
+									<option>John Son</option>
+									<option>Mark</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<button type="button" class="" data-toggle="modal" data-target="#myModal">
+								  <i class="fas fa-address-book fa-2x"></i>
+								</button>
+							</div>
+							
+												<!-- Modal -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							        <!-- <h4 class="modal-title" id="myModalLabel"></h4> -->
+							      </div>
+							      <div class="modal-body">
+							        	<div class="form">
+										<div class="info">
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Họ và tên:</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Loại khách hàng:</p>
+												</div>
+												<div class="col-md-8">
+													<select class="form-control">
+														<option>Cá nhân</option>
+														<option>Doanh nghiệp</option>
+														<option>Gia đình</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Ngày sinh:</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+
+											<div class="row  form-group">
+												<div class="col-md-4">
+													<p>Giới tính:</p>
+												</div>
+												<div class="col-md-8">
+													<input type="radio" name="name"> Nam
+													<input type="radio" name="name"> Nữ
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Số điện thoại</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Phương thức thanh toán</p>
+												</div>
+												<div class="col-md-8">
+													<select class="form-control">
+														<option>Tiền mặt</option>
+														<option>Chuyển khoản</option>
+														<option>Thẻ ghi nợ</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Địa chỉ liên lạc</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Họ tên người nhận:</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Số điện thoại người nhận:</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Địa chỉ giao hàng:</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+
+											<div class="row form-group">
+												<div class="col-md-4">
+													<p>Mô tả:</p>
+												</div>
+												<div class="col-md-8">
+													<input type="text" name="" class="form-control">
+												</div>
+											</div>
+											
+										</div>
+									</div>
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-2" >Lưu</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>	
+
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Họ và tên:</p>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Loại khách hàng:</p>
+							</div>
+							<div class="col-md-6">
+								<select class="form-control">
+									<option>Cá nhân</option>
+									<option>Doanh nghiệp</option>
+									<option>Gia đình</option>
+								</select>
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Ngày sinh:</p>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row  form-group">
+							<div class="col-md-4">
+								<p>Giới tính:</p>
+							</div>
+							<div class="col-md-6">
+								<input type="radio" name="name"> Nam
+								<input type="radio" name="name"> Nữ
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Số điện thoại</p>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Phương thức thanh toán</p>
+							</div>
+							<div class="col-md-6">
+								<select class="form-control">
+									<option>Tiền mặt</option>
+									<option>Chuyển khoản</option>
+									<option>Thẻ ghi nợ</option>
+								</select>
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Địa chỉ liên lạc</p>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Họ tên người nhận:</p>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-4">
+								<p>Số điện thoại người nhận:</p>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+						
+					</div>
+				</div>
+
+				<div id="button" align="right">
+					<button class="btn btn-1" disabled="disabled">Xóa giỏ hàng</button>
+					<button class="btn btn-2">Tiếp tục ></button>
+				</div>
+
+				 <div id="footer" align="center">
+					<p>Copyright &copy 2017. Bản quyền thuộc về BYS.JSC.</p>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+	</body>
+	</html>

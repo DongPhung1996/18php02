@@ -1,0 +1,71 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#head{
+	padding: 10px
+}
+
+.header{
+	border-bottom: 2px solid #ece4e46e;
+}
+
+.buy, .nv{
+	padding: 5px;
+}
+
+.nv p{
+	padding-right: 10px;
+	padding-top: 5px;
+}
+
+.logo h1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+	color: green;
+	font-weight: bold;
+}
+
+.menu{
+	padding-right: 0px;
+	padding-top: 5px;
+}
+
+/*het div head*/
+
+#content{
+	padding: 10px 10px 10px 135px;
+}
+
+/*het div content*/
+.all{
+	background-color: #ece4e46e;
+}
+
+.info, #footer{
+	background-color: #fff;
+	padding: 20px;
+}
+
+#footer{
+	height: 50px;
+}
+
+/*het form*/
+
+#button{
+	margin: 10px;
+}
+
+.btn-1{
+	background-color: gray;
+	color: #fff;
+	font-weight: bold;
+}
+.btn-2{
+	color: #fff;
+	font-weight: bold;
+	background-color: #369a79;
+}
