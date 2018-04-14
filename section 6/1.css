@@ -1,0 +1,12 @@
+#all{
+	border: 1px solid black;
+	width: 200px;
+	margin: auto;
+	padding: 10px;
+}
+
+#A img{
+	margin-right: 10px;
+	vertical-align: middle;
+	padding-left: 10px;
+}

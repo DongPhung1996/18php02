@@ -1,0 +1,35 @@
+.pic-1, .pic-2, .pic-3, .pic-4, .pic-5, .pic-6, .pic-7, .pic-8 {
+	transition: 3s;
+}
+
+.pic-1:hover{
+	transform: rotate(180deg);
+}
+
+.pic-2:hover{
+	transform: scaleX(1.4);
+}
+
+.pic-3:hover{
+	transform: scaleY(1.4);
+}
+
+.pic-4:hover{
+	transform: skewX(-20deg);
+}
+
+.pic-5:hover{
+	transform: skewY(-30deg);
+}
+
+.pic-6:hover{
+	transform: translateX(30px);
+}
+
+.pic-7:hover{
+	transform: translateY(20px);
+}
+
+.pic-8:hover{
+	transform: matrix(0.5, 0.5, -0.5, 1, 0, 0);
+}

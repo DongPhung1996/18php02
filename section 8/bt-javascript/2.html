@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài tập </title>
+</head>
+<body>
+	<p>My exercies</p>
+	<button type="button" onclick="myFunction()">Show</button>
+	<script type="text/javascript">
+	function myFunction() {	
+		for (var i = 0; i <= 100; i++) {
+			if(i%3 == 0)
+			{
+				document.write("Số chia hết cho Ba là: " +  i + "<br>");
+			}
+			if(i%5 == 0)
+			{
+				document.write("Số chia hết cho Năm là: " + i + "<br>");
+			}
+		}
+		for (var i = 0; i <= 100; i++) {
+			if(i%15 ==0 )
+			{
+				document.write("Số chia hết cho Mười Lăm là: " + i + "<br>");
+			}
+		}
+	}	
+	</script>
+</body>
+</html>

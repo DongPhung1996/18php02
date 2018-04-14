@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bài tập 3</title>
+</head>
+<body>
+	<form>
+		Username: <input type="text" name="username" id="username"> <br> <br>
+		Password: <input type="password" name="pass" id="password"> <br> <br>
+		<input type="submit" name="login" onclick="validateForm()">
+	</form>
+	<script type="text/javascript">
+		function validateForm()
+		{
+	
+		    var username = document.getElementById('username').value;
+		    var password = document.getElementById('password').value;
+		    if (username == ''){
+		        alert('Bạn chưa nhập tên đăng nhập');
+		    }
+		    else if (password == '')
+		    {
+		        alert('Bạn chưa nhập mật khẩu');
+		    }
+		    else{
+		        alert('Dữ liệu hợp lệ, ta có thể chấp nhận submit form');
+		        return true;
+		    }	 
+		    return false;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+#accident{
+	width: 100%;
+	margin: auto;
+}
+
+.event-1, .event-2{
+	float: left;
+	width: 50%;
+	margin: auto;
+}
+
+.event-1 img{
+	animation: moveright 2s 3s infinite ease-in-out alternate;
+}
+
+@keyframes moveright{
+	from{
+		margin-left: 20%;
+		color: blue;
+	}
+	to{
+		margin-left: 60%;
+		color: red;
+	}
+}
+
+.event-2 img{
+	animation: burn 3s 1s infinite ease-in-out alternate;
+}
+
+@keyframes burn{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}

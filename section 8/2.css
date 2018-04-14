@@ -1,0 +1,21 @@
+#accordion div{
+	overflow: hidden;
+	height: 0;
+	transition: height 2s ease-in-out;
+}
+#accordion  a{
+	text-decoration: none;
+	color: green;
+}
+#accordion div:target{
+	height: 60px;
+}
+
+#head{
+	color: blue;
+	transition: color 5s ease-out 2s;
+}
+
+#head:hover{
+	color: red;
+}
