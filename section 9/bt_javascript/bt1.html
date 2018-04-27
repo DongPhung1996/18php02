@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bài tập về javascript</title>
+        <link rel="stylesheet" type="text/css" href="1.css">
+        <link rel="shortcut icon" type="" href="images/ghost.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1 align="center">Máy tính bỏ túi</h1>
+        <form name="calculator">
+            <table>
+                <tr>
+                    <td colspan="4"><input type="text" name="input" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"  value="1" onclick="calculator.input.value += 1"></td>
+                    <td><input type="button"  value="2" onclick="calculator.input.value += 2"></td>
+                    <td><input type="button"  value="3" onclick="calculator.input.value += 3"></td>
+                    <td><input type="button"  value="+" onclick="calculator.input.value += '+'"></td>
+                </tr>
+                 <tr>
+                    <td><input type="button"  value="4" onclick="calculator.input.value += 4"></td>
+                    <td><input type="button"  value="5" onclick="calculator.input.value += 5"></td>
+                    <td><input type="button"  value="6" onclick="calculator.input.value += 6"></td>
+                    <td><input type="button"  value="-" onclick="calculator.input.value += '-'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"  value="7" onclick="calculator.input.value += 7"></td>
+                    <td><input type="button"  value="8" onclick="calculator.input.value += 8"></td>
+                    <td><input type="button"  value="9" onclick="calculator.input.value += 9"></td>
+                    <td><input type="button"  value="x" onclick="calculator.input.value += '*'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"  value="C" onclick="calculator.input.value = ' '"></td>
+                    <td><input type="button"  value="0" onclick="calculator.input.value += 0"></td>
+                    <td><input type="button"  value="=" onclick="calculator.input.value = eval(calculator.input.value)"></td>
+                    <td><input type="button"  value="/" onclick="calculator.input.value += '/'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="BACKSPACE" onclick="calculator.input.value += 'back'"></td>
+                    <td><input type="button" value="." onclick="calculator.input.value += '.'"></td>
+                    <td><input type="button" value="M+" onclick="calculator.input.value "></td>
+                    <td><input type="button" value="M-" onclick="calculator.input.value "></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
