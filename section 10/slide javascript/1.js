@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded",function(){
 			//console.log(this.previousElementSibling);
 			var nutkichhoat = this;
 			for (var vt = 0;nutkichhoat = nutkichhoat.previousElementSibling ; vt++) {
-				// console.log(' bien i ' + i );
-				// console.log(' phan tu nut kich hoat la ' + nutkichhoat);
 			}
 			//het vong lap bien i = so thu tu
 			console.log(" vi tri cua phan tu co class la kich hoat: " + vt);
