@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery</title>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<p><a href="#" id="demo">Try</a></p>
+	<p><a href="#" class="demo2">Try class</a></p>
+	<p>My name</p>
+	<div class="demo3">
+		click demo 2
+	</div>
+	<script type="text/javascript">
+		$('#demo').click(function () {
+			alert("Hello!");
+		});
+		$('.demo2').click(function(){
+			alert("Hello 2");
+		});
+		$('p').click(function(){
+			$('.demo3').show();
+		});
+		$('.demo3').click(function(){
+			$(this).hide();
+		})
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+table{
+	width: 500px;
+	margin: auto;
+	margin-top: 20px;
+	border-collapse: collapse;
+}
+
+td{
+	padding: 10px;
+}
+
+
+img{
+	width: 100px;
+}
+
+.name-boy{
+	color: red;
+}
+
+.name-girl{
+	color: blue;
+}
+
+.name-girl-2{
+	color: yellow;
+	font-size: 30px;
+}
+

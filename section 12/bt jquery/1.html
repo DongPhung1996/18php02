@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bt form 1</title>
+	<link rel="shortcut icon" type="" href="images/ghost.png">
+	<link rel="stylesheet" type="text/css" href="1.css">
+	<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Tên</td>
+			<td><input id="name" type="text" name=""></td>
+		</tr>
+		<tr>
+			<td>Ngày sinh</td>
+			<td><input id="date" type="text" name=""></td>
+		</tr>
+		<tr>
+			<td>Giới tính</td>
+			<td>
+				<input  type="radio" name="nam" class="boy"> Nam
+				<input type="radio" name="nam" class="girl"> Nữ
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src="images/logo-nu.png" class="img-2">
+			</td>
+			<td>
+				<img src="images/logo-nam.png" class="img-1">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><button>Login</button></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+		    $('.boy').click(function(){
+		    	$('#name').addClass('name-boy');
+		    	$('#name').removeClass('name-girl');
+		        $('.img-2').hide();
+		        $('.img-1').show();
+		    });
+		    $('.girl').click(function(){
+		    	$('#name').addClass('name-girl');
+		    	$('#name').removeClass('name-boy');
+		        $('.img-1').hide();
+		        $('.img-2').show();
+		    });
+
+		    if($('#date').val() >= 1997){
+		    	$('.girl').click(function(){
+			    	$('#name').addClass('name-girl-2');
+			    	$('#name').removeClass('name-boy');
+			        $('.img-1').hide();
+			        $('.img-2').show();
+			    });
+		    }
+		});
+	</script>
+</body>
+</html>
