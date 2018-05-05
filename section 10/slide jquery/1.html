@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bai tap 7 b</title>
+	<link rel="stylesheet" type="text/css" href="chung.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="content">
+		<h1>Using Slide Show</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor natus cum provident vero a quis quasi ea dolorem repellendus, ipsam asperiores explicabo, nesciunt earum illum accusantium tempore et veniam quaerat.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic et itaque incidunt, iste, rerum reprehenderit, ab libero doloribus odit voluptates ea modi aliquid similique eveniet dicta sequi totam cum ut!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, ducimus. Tempore in, sit corporis odio, rerum esse velit hic necessitatibus consequuntur doloribus, quod labore perferendis enim qui. Eius, debitis, nam!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magni omnis, illo ducimus, expedita ab quidem optio quis pariatur tempore tempora aliquam dolorum, voluptates repellendus nostrum beatae accusamus magnam nisi.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ea nulla, quas possimus architecto ab quia ullam expedita pariatur molestiae cumque perferendis cupiditate quo temporibus atque, voluptas, omnis nostrum? Ex.</p>
+		<a href="https://www.w3schools.com/jquery/jquery_events.asp">Xem Thêm Tại Đây</a>
+	</div>
+	<div id="slideshow">
+		<img class="active" src="1.jpg">
+		<img src="2.jpg">
+		<img src="3.jpg">
+		<img src="4.jpg">
+		<img src="5.jpg">
+	</div>
+	<script type="text/javascript">
+		function slideSwitch(){
+			var $active = $(' #slideshow IMG.active');
+			if( $active.length == 0) $active = $('#slideshow.last');
+			var $next = $active.next.length ? $active.next() : $('#slideshow IMG.first');
+
+			$active.addClass('last-active');
+			$next.css({opacity: 0.0})
+			.addClass('active')
+			.animate({opacity: 1.0}, 1000, function(){
+				$active.removeClass('active last-active');
+			});
+		}
+
+		$(function(){
+			setInterval("slideSwitch()", 5000);
+		});
+	</script>
+</body>
+</html>
