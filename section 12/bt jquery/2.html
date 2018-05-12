@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bai tap jquery 2</title>
+	<link rel="shortcut icon" type="" href="images/ghost.png">
+	<link rel="stylesheet" type="text/css" href="2.css">
+	<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="form">
+		<p>Họ và tên:</p>
+		<p id="name-1" class="id"></p>
+		<input id="name" type="text" name="name" placeholder="Nhập tên">
+		<p>Email:</p>
+		<p id="email-1" class="id"></p>
+		<input id="email" type="text" name="name" placeholder="Nhập Email">
+		<p>Số điện thoại:</p>
+		<p id="phone-1" class="id"></p>
+		<input id="phone" type="text" name="name" placeholder="Nhập số điện thoại">
+		<p>Giới tính:</p>
+		<input type="radio" name="nam"> Nam
+		<input type="radio" name="nam"> Nữ
+		<p>Ngày đến:</p>
+		<input type="date" name="">
+		<p>Ngày đi:</p>
+		<input type="date" name="">
+		<p>Só người lớn:</p>
+		<p class="id"></p>
+		<input type="text" name="">
+		<p>Só trẻ em:</p>
+		<p class="id"></p>
+		<input type="text" name="">
+	</div>
+	<br>
+	<div align="center">
+		<button>Đặt Phòng</button>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#name').click(function(){
+				$("p#name-1").hide();
+			});
+			$('#email').click(function(){
+				$("p#email-1").hide();
+			});
+			$('#phone').click(function(){
+				$("p#phone-1").hide();
+			});
+			$('button').click(function(){
+				$("p#name-1").show();
+				$("p#email-1").show();
+				$("p#phone-1").show();
+				if($('#name').val() == '')
+				{
+					$('p#name-1').text("Bạn chưa nhập tên!");
+				}
+				if($('#email').val() == '')
+				{
+					$('p#email-1').text("Bạn chưa nhập email!");
+				}
+				if($('#phone').val() == '')
+				{
+					$('p#phone-1').text("Bạn chưa nhập số điện thoại!");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

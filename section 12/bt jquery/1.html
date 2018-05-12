@@ -15,7 +15,7 @@
 		</tr>
 		<tr>
 			<td>Ngày sinh</td>
-			<td><input id="date" type="text" name=""></td>
+			<td><input id="date" type="number" name=""></td>
 		</tr>
 		<tr>
 			<td>Giới tính</td>
@@ -26,10 +26,10 @@
 		</tr>
 		<tr>
 			<td>
-				<img src="images/logo-nu.png" class="img-2">
+				<img alt="nam" src="images/logo-nu.png" class="img-2">
 			</td>
 			<td>
-				<img src="images/logo-nam.png" class="img-1">
+				<img alt="nu" src="images/logo-nam.png" class="img-1">
 			</td>
 		</tr>
 		<tr>
@@ -38,7 +38,6 @@
 	</table>
 	<script type="text/javascript">
 		$(document).ready(function(){
-
 		    $('.boy').click(function(){
 		    	$('#name').addClass('name-boy');
 		    	$('#name').removeClass('name-girl');
@@ -51,14 +50,8 @@
 		        $('.img-1').hide();
 		        $('.img-2').show();
 		    });
-
-		    if($('#date').val() >= 1997){
-		    	$('.girl').click(function(){
-			    	$('#name').addClass('name-girl-2');
-			    	$('#name').removeClass('name-boy');
-			        $('.img-1').hide();
-			        $('.img-2').show();
-			    });
+		    if($('#date').val() >= 1997 && ){
+		    	$('#name').addClass('name-girl-2');
 		    }
 		});
 	</script>
