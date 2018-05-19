@@ -12,12 +12,13 @@
 		<button class="button" onclick="inChu()">Submit</button>
 	</div>
 	<div align="center">
-		<p id="demo">dong</p>
+		<p id="demo"></p>
 	</div>
 	<script type="text/javascript">
-		var text = document.getElementById('text').value;
 		function inChu() {
-			document.getElementById('demo').innerHTML = text;
+		var text = document.getElementById('text').value;
+		console.log(text);
+		document.getElementById('demo').innerHTML = text;
 		}
 	</script>
 </body>
