@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example-2</title>
+</head>
+<body>
+	<div align="center">
+		<textarea id="text"></textarea>
+	</div>
+	<div align="center">
+		<button class="button" onclick="inChu()">Submit</button>
+	</div>
+	<div align="center">
+		<p id="demo">dong</p>
+	</div>
+	<script type="text/javascript">
+		var text = document.getElementById('text').value;
+		function inChu() {
+			document.getElementById('demo').innerHTML = text;
+		}
+	</script>
+</body>
+</html>
