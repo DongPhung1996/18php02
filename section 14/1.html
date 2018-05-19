@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example - 1</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="1.css">
+</head>
+<body>
+	<div class="container" align="center">
+		<div class="row">
+			<div class="col-xl-3 col-lg-4">
+				<p class="3">3</p>
+			</div>
+			<div class="col-xl-9 col-lg-8"> 
+				<p class="9">9</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-12 col-lg-12">
+				<p>12</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-6 col-lg-6">
+				<p>6</p>
+			</div>
+			<div class="col-xl-6 col-lg-6"> 
+				<p>6</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-6">
+				<p class="4">4</p>
+			</div>
+			<div class="col-xl-4 col-lg-6"> 
+				<p class="4">4</p>
+			</div>
+			<div class="col-xl-4 col-lg-0"> 
+				<p class="remove">4</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-3 col-lg-6">
+				<p class="3a">3</p>
+			</div>
+			<div class="col-xl-3 col-lg-6">
+				<p class="3a">3</p>
+			</div>
+			<div class="col-xl-3 col-lg-0">
+				<p class="three-2">3</p>
+			</div>
+			<div class="col-xl-3 col-lg-0">
+				<p class="three">3</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-9 col-lg-4 ">
+				<p class="three-9">9</p>
+			</div>
+			<div class="col-xl-3 col-lg-4 "> 
+				<p class="three">3</p>
+			</div>
+			<div class="col-xl-0 col-lg-4 " >
+				<p class="three-3"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-3 col-lg-4 ">
+				<p class="three">3</p>
+			</div>
+			<div class="col-xl-9 col-lg-4 "> 
+				<p class="three-9">9</p>
+			</div>
+			<div class="col-xl-0 col-lg-4 ">
+				<p class="three-3"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-8 col-lg-6">
+				<p class="8">8</p>
+			</div>
+			<div class="col-xl-4 col-lg-6"> 
+				<p class="4a">4</p>
+			</div>
+		</div>
+	</div>
+	<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(window).resize(function(){
+			var width = $(window).width();
+			// console.log(width);
+			if(width <= 1024)
+			{
+				$('.3').html("4");
+				$('.9').html("8");
+				$('.4').html("6");
+				$('.3a').html("6");
+				$('.remove, .remove-1').html(" ");
+				$('.three-9, .three, .three-3, .three-2').html("4");
+				$(".8, .4a").html("6");
+			}
+			else{
+				$('.3').html("3");
+				$('.9').html("9");
+				$('.4').html("4");
+				$('.3a').html("3");
+				$('.three, .three-2').html("3");
+				$('.three-9').html("9");
+				$('.remove').html("4");
+				$('.remove-1').html("3");
+				$('.three-3').html(" ");
+				$(".8").html("8");
+				$(".4a").html("4");
+			}
+		});
+	</script>
+</body>
+</html>

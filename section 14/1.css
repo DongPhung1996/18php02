@@ -1,0 +1,4 @@
+.row, .col-xl-3, .col-xl-4, .col-xl-6, .col-xl-8, .col-xl-9, .col-xl-12{
+	border: 1px solid black;
+	height: 50px;
+}
