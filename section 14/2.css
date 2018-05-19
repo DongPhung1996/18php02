@@ -1,0 +1,14 @@
+.container{
+	width: 400px;
+	margin: auto;
+}
+
+.output{
+	width: 200px;
+	text-align: center;
+	border: 1px solid black;
+	height: 100px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
