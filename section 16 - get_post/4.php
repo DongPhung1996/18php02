@@ -20,10 +20,10 @@
 			}
 			else
 			{
-				fwrite($user, $name);
-				fwrite($address_email, $email);
-				fwrite($pass, $password);
-				fwrite($phone_number, $phone);
+				fwrite($user, $name."-");
+				fwrite($address_email, $email."-");
+				fwrite($pass, $password."-");
+				fwrite($phone_number, $phone."-");
 				echo "Đã ghi vào file INFO.txt";
 			}
 		}
