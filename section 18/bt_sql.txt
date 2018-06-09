@@ -1,0 +1,13 @@
+﻿BTVN:
+1. Thiết kế 2 bảng: sản phẩm và danh mục sản phẩm (products và categories)
+2. Tạo form nhập danh mục sản phẩm bằng php
+3. Tạo trang list danh mục sản phẩm ra bằng php
+4. Có thể sửa danh mục sản phẩm bằng php
+5. Tạo form nhập sản phẩm - có quản hệ với danh mục sản phẩm qua category_id
+6. List sản phẩm ra bằng PHP, có tên danh mục sản phẩm trong trang list sản phẩm
+7. Có thể sửa sản phẩm bằng PHP 
+8. Có thể xoá sản phẩm, danh mục sản phẩm bằng PHP 
+9. Sản phẩm có upload được hình lên và lưu tên hình vào trong database
+10. Sản phẩm có thêm 2 trường ngày đăng sản phẩm và ngày sửa sản phẩm
+Bộ lọc:
+11. Có bộ search ở phía trên để lọc theo danh mục sản phẩm, tên sản phẩm, ngày đăng sản phẩm, giá sản phẩm

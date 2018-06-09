@@ -2,19 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Exercies_1</title>
+	<title>Exercies-2</title>
 </head>
 <body>
-	<h1>Form nhập liệu</h1>
-	<form action="" method="POST">
-		Nhập tên: <input type="text" name="name" id="name">
-		Nhập email: <input type="text" name="email" id="email">
-		Nhập phone: <input type="text" name="phone" id="phone">
-		<br>
-		<input type="submit" name="submit" value="submit">
-	</form>
 	<?php
-		if ($_SERVER['REQUEST_METHOD'] == "POST") {
+		if (isset($_POST)['submit']) {
 			$name = $_POST['name'];
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
@@ -37,7 +29,11 @@
 					//var_dump();
 					//exit;
 				}
-				$sql = "INSERT INTO users (name, email, phone) VALUES ('$name', '$email', '$phone')";
+				$sql = "SELECT name, email, phone FROM users WHERE left(phone, 3) = '098'";
+				$sql1 = "SELECT name, email, phone FROM users WHERE name LIKE '%a%'";
+				$sql2 = "SELECT name, email, phone FROM users WHERE email LIKE '%@gmail%'";
+				$sql3 = "DELETE FROM users WHERE phone LIKE '098' AND name LIKE '%a%'";
+				$sql4 = "SELECT name, email, phone FROM users WHERE phone LIKE '_8%'";
 				if ($conn->query($sql)===TRUE) {
 					echo "Successfully";
 				}
@@ -47,7 +43,14 @@
 				$conn->close();
 			}
 		}
-		
 	?>
+	<h1>Form nhập liệu</h1>
+	<form action="" method="POST">
+		Nhập tên: <input type="text" name="name" id="name">
+		Nhập email: <input type="text" name="email" id="email">
+		Nhập phone: <input type="text" name="phone" id="phone">
+		<br>
+		<input type="submit" name="submit" value="submit">
+	</form>
 </body>
 </html>
