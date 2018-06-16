@@ -9,19 +9,39 @@
 	<?php
 		include 'connectdb.php';
 		$errorName = '';
-		$checkValidate = true;
-		$target = "images/"; 
-		$target = $target . basename( $_FILES['image']['name']);
+		$errorId = '';
+		$errorDes = '';
+		$errorPrice = '';
+		$errorImg = '';
+		$checkId = true;
+		$checkName = true;
+		$checkDescription = true;
+		$checkPrice = true;
 		if(isset($_POST['add_product'])){
+			$target = 'images/';
 			// echo "da nhan submit de tao san pham";		
 			$category_id = $_POST['category_id'];
 			$name = $_POST['name'];
 			$description = $_POST['description'];
-			$image = $_FILE['image']['name'];
+			//var_dump($_FILES);
+			//exit();
+			$image = $_FILES['image']['name'];
 			$price = $_POST['price'];
-			if(empty($name) || empty($category_id) || empty($description) || empty($price)){
-				$errorName =  "Please input value!";
-				$checkValidate = false;
+			if(empty($category_id)){
+				$errorId =  "Please input category_id!";
+				$checkId = false;
+			} 
+			if(empty($name)){
+				$errorName =  "Please input name!";
+				$checkName = false;
+			} 
+			if(empty($description)){
+				$errorDes =  "Please input description!";
+				$checkDescription = false;
+			} 
+			if(empty($price)){
+				$errorPrice =  "Please input price!";
+				$checkPrice = false;
 			}
 			if(move_uploaded_file($_FILES['image']['tmp_name'],$target)) 
 			{
@@ -30,8 +50,9 @@
 			else
 			{
 				echo "Sorry, there was a problem uploading your file.";
+				$errorImg = "Please inp image!";
 			}
-			if($checkValidate){
+			if($checkId && $checkName && $checkDescription && $checkPrice){
 				$sql = "INSERT INTO products(category_id,name,description,image,price) VALUES('$category_id','$name','$description','$image','$price')";
 				mysqli_query($conn,$sql);
 				//chuyen trang bang php
@@ -40,17 +61,17 @@
 		}
 	?>
 	<h1>Add new category</h1>
-	<form action="" method="post">
+	<form action="" method="post" enctype="multipart/form-data">
 		<p>Category_id:<input type="text" name="category_id"></p>
-		<span class="error"><?php echo $errorName;?></span>
+		<span class="error"><?php echo $errorId;?></span>
 		<p>Name:<input type="text" name="name"></p>
 		<span class="error"><?php echo $errorName;?></span>
 		<p>Description:<input type="text" name="description"></p>
-		<span class="error"><?php echo $errorName;?></span>
-		<p>Image:<input type="file" name="image" id="image"></p>
-		<span class="error"><?php echo $errorName;?></span>
+		<span class="error"><?php echo $errorDes;?></span>
+		<p>Image:<input type="file" name="image" ></p>
+		<span class="error"><?php echo $errorImg;?></span>
 		<p>Price:<input type="text" name="price"></p>
-		<span class="error"><?php echo $errorName;?></span>
+		<span class="error"><?php echo $errorPrice;?></span>
 		<p><input type="submit" name="add_product" value="Add"></p>
 	</form>
 </body>
