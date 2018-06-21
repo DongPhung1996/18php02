@@ -1,0 +1,7 @@
+﻿SELECT*FROM products WHERE ...AND published > row();
+published: Ngày sẽ đăng sản phẩm lên bán
+created: Ngày tạo sản phẩm
+updated: Ngày chỉnh sửa sản phẩm
+deleted: Ngày xóa sản phẩm
++ Nếu deleted = NULL(mặc định -> thì sản phẩm chưa bị xóa
++ Nếu deleted = ngày tháng thì sản phẩm bị xóa tại thời điểm đó
