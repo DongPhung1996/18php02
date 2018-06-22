@@ -44,5 +44,26 @@
 			echo "404 Page Not Found!";
 			die();
 		}
+
+		public function createUrl($url, $params = []){
+			if($url)
+				$params[self::PARAM_NAME] = $url;
+			return $_SERVER['PHP_SELF'].'?'.http_build_query($params);
+			//nhan vao mot mang in ra chuoi param
+		}
+
+		//chuyen sang trang khac
+		public function redirect($url){
+			$u = $this->createUrl($url);
+			header("Location:$u");
+		}
+
+		public function homePage(){
+			$this->redirect(self::HOME_PAGE);
+		}
+
+		public function loginPage(){
+			$this->redirect("login");
+		}
 	}
 ?>

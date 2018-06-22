@@ -47,7 +47,7 @@
 
 		public function buildQueryParams($params){
 			$default = [
-				"select"=>"",
+				"select"=>"*",
 				"where"=>"",
 				"other"=>"",
 				"params"=>"",
@@ -80,15 +80,18 @@
 
 		public function select(){
 			$sql = "select ".$this->queryParams["select"]." from ".$this->tableName."  ".$this->buildCondition($this->queryParams["where"])." ".$this->queryParams["other"];
-			var_dump($sql);
-			die();
+			// var_dump($sql);
+			// die();
 			$query = $this->query($sql, $this->queryParams["params"]);
 			return $query->fetchAll(PDO::FETCH_ASSOC);
 		}
 
-		public function seclectOne(){
+		public function selectOne(){
 			$this->queryParams["other"] = "limit 1";
+			// var_dump($this->queryParams);
+			// die();
 			$data = $this->select();
+
 			if($data){
 				return $data[0];
 			}
