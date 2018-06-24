@@ -1,0 +1,28 @@
+﻿1. Nghiên cứu OOP, từng tình chất và ví dụ:
+Hỏi mỗi người mỗi tính chất  + ví dụ:
+- Tính trừu tượng: là bỏ qua những thuộc tính phương thức ko cần thiết lấy những thuộc tính phương thức
+cần thiết sử dụng cho chương trình (tối ưu hóa)
+
+- Tính kế thừa: lớp con kế thừa và sử dụng lại các thuộc tính của lớp cha và ko cần khai báo lại. chỉ khai báo
+thêm các thuộc tính mới và phương thức mới.
+Sử dụng: $this để gọi các phương thức thuộc tính. Để phân hiệt thuộc tính, phương thức nào của cha của con
+thì sử dụng từ khóa parent::thuộc tính và parent::phương_thức()
+
+- Tính đa hình: Ngoài việc sử dụng các phương thức kế ở lớp cha thì chúng ta sẽ viết thêm một số phương thức ở 
+lớp con tùy theo bài toán cụ thể.
+
+- Tính đóng gói: không cho đối tượng bên ngoài truy cập vào lớp để xem cài như thế nào. nếu muốn thay đổi bên trong 
+đối tượng thì phải được sự chấp thuận của đối tượng đó thông qua các mức truy cập pubic, protected và private
+
+public: truy cập bất cứ đâu
+protected: chỉ truy cập được trong lớp con kế thừa không truy cập được trong các đối tượng 
+private: Không thể truy cập ở đâu ngoài lớp đó
+
+static: hoạt động như biến toàn cục dù nó có ở trong file nào đi nữa thì nó đều lưu lại giá trị cuối cùng mà nó được thực hiện trong lớp
+final: đối với lớp thì không thể kế thừa và đối với phương thức thì sẽ không thể bị ghi đè
+extends: kế thừa từ lớp cha
+2. Nghiên cứu MVC:
+- Model: là nơi chứa các hàm các phương thức truy vấn trực tiếp tới dữ liệu
+- View: Tiếp nhận dữ liệu từ controller và hiện thị nội dung
+- Controller: Là trung gian giữa model và view sử dụng các phương thức các hàm trong model để lấy dữ liệu đổ ra view
+3. List sản phẩm ra và mua hàng, cho vào giỏ hàng và tăng giảm số lượng sản phẩm mua
