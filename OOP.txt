@@ -6,7 +6,7 @@ cần thiết sử dụng cho chương trình (tối ưu hóa)
 - Tính kế thừa: lớp con kế thừa và sử dụng lại các thuộc tính của lớp cha và ko cần khai báo lại. chỉ khai báo
 thêm các thuộc tính mới và phương thức mới.
 Sử dụng: $this để gọi các phương thức thuộc tính. Để phân hiệt thuộc tính, phương thức nào của cha của con
-thì sử dụng từ khóa parent::thuộc tính và parent::phương_thức()
+thì sử dụng từ khóa parent::uộc tính và parent::phương_thức()
 
 - Tính đa hình: Ngoài việc sử dụng các phương thức kế ở lớp cha thì chúng ta sẽ viết thêm một số phương thức ở 
 lớp con tùy theo bài toán cụ thể.
@@ -26,3 +26,5 @@ extends: kế thừa từ lớp cha
 - View: Tiếp nhận dữ liệu từ controller và hiện thị nội dung
 - Controller: Là trung gian giữa model và view sử dụng các phương thức các hàm trong model để lấy dữ liệu đổ ra view
 3. List sản phẩm ra và mua hàng, cho vào giỏ hàng và tăng giảm số lượng sản phẩm mua
+
+bootstrap/scss/bootstrap.scss

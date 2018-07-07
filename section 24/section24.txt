@@ -1,0 +1,28 @@
+﻿Users
+
+Product
+
+Backend
+- Quản trị thông tin người dùng
+- Quản trị sản phẩm
+- Quản trị đơn hàng 
+- Có quyền mời truy cập được (thường là admin_
+
+Front end
+- Hiển thị thông tin cho tất cả mọi người dều có thể truy cập mà không cần login
+- Hiển thị sản phẩm
+- Đăng ký
+- Mua hàng
+if(isset($_SESSON['login']) &&$_SESSION['role']=='1')
+
+function checkPermission(isset($_SESSON['login']));
+
+fuction checkPermission(login);
+
+OOP
+MVC
+
+
+public: thuộc tính và phương thức có thể sử dụng ở đối tượng đó, đối tượng kế thừa đối tượng đó và bên ngoài
+protected: thuộc tính và phương thức chỉ có thể sử dụng ở đối tượng đó và đối tượng kế thừa
+private: Thuộc tính và phương thức chỉ có thể sử dụng ở đối tượng đó
