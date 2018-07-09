@@ -26,3 +26,9 @@ MVC
 public: thuộc tính và phương thức có thể sử dụng ở đối tượng đó, đối tượng kế thừa đối tượng đó và bên ngoài
 protected: thuộc tính và phương thức chỉ có thể sử dụng ở đối tượng đó và đối tượng kế thừa
 private: Thuộc tính và phương thức chỉ có thể sử dụng ở đối tượng đó
+
+
+MVC:
+Model: Tương tác và xử lý với dữ liệu, database
+Controller: Điều hướng các hoạt động
+View: Tiếp nhận thông tin và hiển thị dữ liệu
