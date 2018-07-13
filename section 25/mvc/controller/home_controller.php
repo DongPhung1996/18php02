@@ -1,4 +1,4 @@
-n<?php 
+<?php 
 	include './model/user_model.php';
 	class HomeController{
 		function handleRequest(){
