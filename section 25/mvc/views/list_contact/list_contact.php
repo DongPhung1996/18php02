@@ -15,15 +15,13 @@
 			border: 1px solid black;
 			border-top: none;
 			text-align: center;
-			background-image: url(images/1.jpg);
-			background-repeat: no-repeat;
-			color: #fff;
+		
 		}
 	</style>
 </head>
 <body>
 	<div id="homi">
-		<h1>Trang chủ</h1>
+		<h1>List_contact</h1>
 	</div>
 	
 </body>

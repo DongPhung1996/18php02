@@ -28,6 +28,7 @@
 						$userModel2 = new UserModel();
 						$userModel2->contact($email, $phone);					
 					}
+				
 				default:
 					# code...
 					break;

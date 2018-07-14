@@ -46,7 +46,6 @@
 		    <li><a href="index.php?action=home">HOME</a></li>
 	 		<li><a href="index.php?action=register">REGISTER</</a></li>
 	 		<li><a href="index.php?action=contact">CONTACT</a></li>
-	 		<li><a href="index.php?action=list_contact"> LIST_CONTACT</a></li>
 		</ul>
 	</div>
 </body>

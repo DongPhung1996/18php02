@@ -47,6 +47,7 @@
 				height: 40px;
 				margin: 10px;
 				padding: 10px;
+				border-radius: 10px;
 			}
 			form label{
 				text-transform: uppercase;
