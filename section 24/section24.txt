@@ -32,3 +32,7 @@ MVC:
 Model: Tương tác và xử lý với dữ liệu, database
 Controller: Điều hướng các hoạt động
 View: Tiếp nhận thông tin và hiển thị dữ liệu
+
+Model - Behavior
+Controller - Components
+Views - Helpers
