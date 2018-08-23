@@ -44,23 +44,23 @@ class AdminModel extends ConnectDB{
 				$sql .= 'id_card ='.$dataPost['id_card'];
 				break;
 
-			case "phone" : 
+			case "phone": 
 				$sql .= 'phone ='.$dataPost['phone'];
 				break;
  
-			case "email" : 
+			case "email": 
 				$sql .= 'email ='.$dataPost['email'];
 				break;
 
-			case "passport_no" : 
+			case "passport_no": 
 				$sql .= 'passport_no ='.$dataPost['passport_no'];
 				break;
 
-			case "number_of_insurrance" : 
+			case "number_of_insurrance": 
 				$sql .= 'number_of_insurrance ='.$dataPost['number_of_insurrance'];
 				break;
 
-		 	default : 
+		 	default: 
 		 		$sql .= 'bank_account ='.$dataPost['bank_account'];
 		 		break ;
 		}
@@ -144,6 +144,28 @@ class AdminModel extends ConnectDB{
 		return mysqli_query($this->conn, $sql);
 	}
 	//End function skills
+
+	//Function information resident
+	function listInformationResident() {
+		$sql = "SELECT * FROM information_residence";
+		return mysqli_query($this->conn, $sql);
+	}
+
+	function deleteListInformationResident() {
+		echo 'Delete Redisdent';
+	}
+	//End function information resident
+
+	//Function register for the clinic
+	function listRegisterClinic() {
+		$sql = "SELECT * FROM register_for_the_clinic";
+		return mysqli_query($this->conn, $sql);
+	}
+
+	function deleteClinic() {
+		echo 'Delete clinic';
+	}
+	//End function register for the clinic
 
 }
 

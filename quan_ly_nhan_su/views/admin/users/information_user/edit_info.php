@@ -11,7 +11,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form action="admin.php?controller=users&action=edit_info_user" role="form" method="post">
+                                    <form action="admin.php?controller=admin&action=edit_info_user" role="form" method="post">
                                         <div class="form-group">
                                             <label>Họ và tên</label>
                                             <input type="text" name="name" class="form-control" value="<?php echo $data['name'];?>">

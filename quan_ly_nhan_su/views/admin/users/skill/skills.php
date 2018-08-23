@@ -23,8 +23,8 @@ include 'views/admin/common/header.php';
 								              <th>Kỹ năng mền</th>
 								              <th>Language Work</th>
 								              <th>Level</th>
-                                              <th>Database</th>
-                                              <th>Level</th>
+                              <th>Database</th>
+                              <th>Level</th>
 								              <th>Technology</th>
 								              <th>Level</th>
 								              <th>Action</th>
@@ -32,26 +32,26 @@ include 'views/admin/common/header.php';
 								          </thead>
 								          <tbody>
 								            <?php $stt = 1 ?>
-                                            <?php foreach ($data as $list) { ?>
-                                            <tr>
-                                              <td><?php echo $stt++ ?></td>
-                                              <td><?php echo $list['name']; ?></td>
-                                              <td><?php echo $list['soft_skill']; ?></td>
-                                              <td><?php echo $list['language_work']; ?></td>
-                                              <td><?php echo $list['level_language']; ?></td>
-                                              <td><?php echo $list['DB']; ?></td>
-                                              <td><?php echo $list['level_DB']; ?></td>
-                                              <td><?php echo $list['technology']; ?></td>
-                                              <td><?php echo $list['level_technology']; ?></td>
-                                              <td>
-                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete">
-                                                  Delete
-                                                </button>
-                                                <!-- Modal -->
-                                                <?php include('modal_delete.php') ?>
-                                              </td>
-                                            </tr>
-                                            <?php } ?>
+                            <?php foreach ($data as $list) { ?>
+                            <tr>
+                              <td><?php echo $stt++ ?></td>
+                              <td><?php echo $list['name']; ?></td>
+                              <td><?php echo $list['soft_skill']; ?></td>
+                              <td><?php echo $list['language_work']; ?></td>
+                              <td><?php echo $list['level_language']; ?></td>
+                              <td><?php echo $list['DB']; ?></td>
+                              <td><?php echo $list['level_DB']; ?></td>
+                              <td><?php echo $list['technology']; ?></td>
+                              <td><?php echo $list['level_technology']; ?></td>
+                              <td>
+                                <button key="<?= $list['id'] ?>" class="btn btn-danger delete" data-toggle="modal" data-target="#Delete">
+                                  Xóa
+                                </button>
+                                <!-- Modal -->
+                                <?php include('modal_delete.php') ?>
+                              </td>
+                            </tr>
+                            <?php } ?>
 								          </tbody>
 								        </table> 
 							      </div>
@@ -70,4 +70,14 @@ include 'views/admin/common/header.php';
     </div>
 </div>
 <!-- /#page-wrapper -->
+<script>
+     $(document).ready(function(){
+          $('.delete').click(function(){
+                var id = $(this).attr('key');
+                $('#id').val(id);
+                console.log(id);
+          });
+     });   
+</script>
+
 <?php include 'views/admin/common/footer.php';?>

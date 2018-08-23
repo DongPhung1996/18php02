@@ -40,12 +40,11 @@ include 'views/admin/common/header.php';
                               <td><?php echo $list['DB']; ?></td>
                               <td><?php echo $list['technology'];?></td>
                               <td>
-                                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete">
-                                        Delete
+                                  <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#Delete" key="<?= $list['id'] ?>">
+                                        Xóa
                                       </button>
                                   <?php include('modal_delete.php') ?>
                               </td>
-                              <input type="hidden" name="id" value="<?php echo $list['id']; ?>">
                             </tr>  
                             <?php } ?>
 								          </tbody>
@@ -65,5 +64,14 @@ include 'views/admin/common/header.php';
         <!-- /.col-lg-12 -->
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('.delete').click(function(){
+            var id = $(this).attr('key');
+            $('#id').val(id);
+            console.log(id);
+        });
+    });
+</script>
 <!-- /#page-wrapper -->
 <?php include 'views/admin/common/footer.php';?>

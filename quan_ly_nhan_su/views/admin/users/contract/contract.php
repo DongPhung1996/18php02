@@ -58,8 +58,8 @@ include 'views/admin/common/header.php';
 									              			date_end_contract="<?= $list['date_end_contract']; ?>"
 									              			bonus="<?= $list['bonus']; ?>"
 									     								      
-									              			type="button" class="view btn btn-primary" data-toggle="modal" data-target="#View">
-														  View
+									              			type="button" class="view btn btn-default" data-toggle="modal" data-target="#View">
+														  Chi tiết
 														</button>
 
 														<!-- Modal -->
@@ -67,10 +67,9 @@ include 'views/admin/common/header.php';
 									              </td>
 									              <td>
 									              		<!-- Button trigger modal -->
-														<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete">
-														  Delete
+														<button class="btn btn-danger delete" data-toggle="modal" data-target="#Delete" key = "<?= $list['id'] ?>">
+														  Xóa
 														</button>
-
 														<!-- Modal -->
 														<?php include('modal_delete.php') ?>
 									              </td>
@@ -128,7 +127,11 @@ include 'views/admin/common/header.php';
 
 			var bonus = $(this).attr('bonus');
 		 	$("#bonus").val(bonus);
-		 	console.log(bonus);
+		});
+		$('.delete').click(function(){
+			var id = $(this).attr('key');
+			$('#id').val(id);
+			console.log(id);
 		});
 	});	
 </script>

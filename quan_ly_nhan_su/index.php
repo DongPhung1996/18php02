@@ -1,5 +1,3 @@
-<?php 
-	require_once 'controller/index_controller.php';
-	$linkIndex = new IndexController();
-	$linkIndex->handleRequest();
-?>
+<?php  
+	require_once 'login_user.php';
+?>	

@@ -11,7 +11,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form action="admin.php?controller=users&action=add_info_user" role="form" method="post">
+                                    <form action="admin.php?controller=admin&action=add_info_user" role="form" method="post">
                                         <div class="form-group">
                                             <label>Họ và tên</label>
                                             <input type="text" name="name" class="form-control">
@@ -103,7 +103,7 @@
                                             <p class="validate form-group"><?php echo isset($error['bank_account']) ? $error['bank_account'] : ''; ?></p>
                                         </div>
                                         <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
-                                        <button type="submit" class="btn btn-default" name="add_info">Add</button>
+                                        <button type="submit" class="btn btn-default" name="add_info">Thêm</button>
                                     </form>
                                 </div>
                             </div>

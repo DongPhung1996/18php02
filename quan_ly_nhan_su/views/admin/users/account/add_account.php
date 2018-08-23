@@ -11,7 +11,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form action="admin.php?controller=users&action=add_account" role="form" method="post">
+                                    <form action="admin.php?controller=admin&action=add_account" role="form" method="post">
                                         <div class="form-group">
                                             <label>Username</label>
                                             <input type="text" name="username" class="form-control">

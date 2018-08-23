@@ -4,7 +4,7 @@ include 'views/admin/common/header.php';
 
 <div id="page-wrapper">
     <div class="row">
-        <div class="col-lg-12" align="center">
+        <div class="col-lg-12" align="centser">
             <h1  class="page-header">Tài khoản</h1>
         </div>
         <div>
@@ -19,6 +19,7 @@ include 'views/admin/common/header.php';
                         <?php if (isset($_SESSION['success'])) {
                             unset($_SESSION['success']);
                         }  ?>
+
                          <?php if (isset($_SESSION['edit'])) { ?>
                                 <div class="alert alert-info" align="center">
                                     <?php echo $_SESSION['edit'];  ?>
@@ -26,7 +27,8 @@ include 'views/admin/common/header.php';
                             <?php } ?>
                             <?php if (isset($_SESSION['edit'])) {
                                 unset($_SESSION['edit']);
-                        }  ?>   
+                        }  ?>
+                           
                         <?php if (isset($_SESSION['add'])) { ?> 
                                 <div class="alert alert-success" align="center">
                                     <?php echo $_SESSION['add'];  ?>
@@ -46,7 +48,8 @@ include 'views/admin/common/header.php';
 							              <th>Role</th>
 							              <th>Email</th>
 							              <th>Username</th>
-							              <th>Action</th>
+							              <th>Sửa</th>
+                                          <th>Xóa</th>
 							            </tr>
 							          </thead>
 							          <tbody>
@@ -59,36 +62,24 @@ include 'views/admin/common/header.php';
 							          		<td><?php echo $list['email'] ?></td>
 							          		<td><?php echo $list['username'] ?></td>
 							          		<td>
-							          			<a class="btn btn-primary" href=<?php echo "admin.php?controller=users&action=edit_account&id=".$list['id'] ?>>
-							          				Edit
+							          			<a class="btn btn-primary" href=<?php echo "admin.php?controller=admin&action=edit_account&id=".$list['id'] ?>>
+							          				Sửa
 							          			</a>
-                                                <a class="btn btn-danger" data-toggle="modal" data-target="#myModal">
-                                                    Delete
-                                                </a>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                                  <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                      <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                        <h4 class="modal-title" id="myModalLabel">Do you want to delete account?</h4>
-                                                      </div>
-                                                      <div class="modal-footer" align="center">
-                                                        <a class="btn btn-danger" href=<?php echo "admin.php?controller=users&action=delete_account&id=".$list['id'] ?>>Yes</a>
-                                                        <a class="btn btn-primary" data-dismiss="modal">No</a>
-                                                        <a class="btn btn-default" data-dismiss="modal">Close</a>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                                            </td>
+                                            <td>    
+                                                <button  class="delete btn btn-danger" key="<?=  $list['id']; ?>" data-toggle="modal" data-target="#Delete">
+                                                    Xóa
+                                                </button>
+                                                <!-- Modal --> 
+                                                <?php include 'modal_delete.php' ?>                                              
 							          		</td>
 							          	</tr>
 							            <?php } ?>
 							          </tbody>
 							        </table> 						        
-							     </div> 
+							     </div>                      
                                  <div class="col-lg-12" align="center">
-                                     <a class="btn btn-success" href="admin.php?controller=users&action=add_account">Tạo tài khoản</a>
+                                     <a class="btn btn-success" href="admin.php?controller=admin&action=add_account">Tạo tài khoản</a>
                                  </div>  							 
                             </div>
                             <!-- /.row (nested) -->
@@ -103,5 +94,14 @@ include 'views/admin/common/header.php';
         <!-- /.col-lg-12 -->
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $(".delete").click(function(){
+            var id = $(this).attr('key');
+            $('#id').val(id);
+            console.log(id);
+        }); 
+    });  
+</script>
 <!-- /#page-wrapper -->
 <?php include 'views/admin/common/footer.php';?>

@@ -5,12 +5,15 @@ include 'views/admin/common/header.php';
 <div id="page-wrapper">
 	<div id="line-example"></div>
     <div class="row">
-        <div class="col-lg-12" align="center">
+        <div class="col-lg-12" align="center">    	 
             <h1  class="page-header">Thành viên</h1>
         </div>
         <div>
         	<div class="row">
                 <div class="col-lg-12">
+                    <?php if (isset($_SESSION['maintain'])) { ?> 
+			            <input type="hidden" value=" <?php echo $_SESSION['maintain'];  ?>"> 
+			        <?php } ?>
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row">
@@ -35,7 +38,7 @@ include 'views/admin/common/header.php';
 									      <?php foreach ($data as $list) { ?>
 									          <tr>
 									              <td><?php echo $stt++?></td>
-									              <td ><?php echo $list["name"]?></td>
+									              <td><?php echo $list["name"]?></td>
 									              <td><?php echo $list["date_of_birth"]?></td>
 									              <td><?php echo $list["id_card"]?></td>
 									              <td><?php echo $list["date_range"]?></td>
@@ -62,25 +65,28 @@ include 'views/admin/common/header.php';
 									              			date_range_insurrance="<?= $list['date_range_insurrance']; ?>"
 									              			issued_by="<?= $list['issued_by']; ?>"
 									              			bank_account="<?= $list['bank_account']; ?>"								      
-									              			type="button" class="view btn btn-primary" data-toggle="modal" data-target="#View">
-														  View
+									              			type="button" class="view btn btn-default" data-toggle="modal" data-target="#View">
+														  Chi tiết
 														</button>
 
 														<!-- Modal -->
-														<?php include('modal_edit.php') ?>
+														<?php include('modal_list.php') ?>
 									              </td>
 									              <td>
 									              		<!-- Button trigger modal -->
-														<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete">
-														  Delete
+														<button type="button" class="delete btn btn-danger" key="<?=  $list['id']; ?>" data-toggle="modal" data-target="#Delete">
+														  Xóa
 														</button>
-
-														<!-- Modal -->
 														<?php include('modal_delete.php') ?>
+														<!-- Modal -->
 									              </td>
 									       <?php } ?>
 							          </tbody>
 							        </table> 
+<!-- 							        <button id="but">Click me</button>
+		        					<div id="model"  hidden>
+										<p>Hello</p>
+									</div> -->
 							   </div>  						 
                             </div>
                             <!-- /.row (nested) -->
@@ -103,7 +109,7 @@ include 'views/admin/common/header.php';
 		 	var date_of_birth = $(this).attr('date_of_birth');
 		 	$("#date_of_birth").val(date_of_birth);
 			var id_card = $(this).attr('id_card');
-		 	$("#id_card").val(id_card);
+		 	$("#id_card").val(id_card);	 	
 			var date_range = $(this).attr('date_range');	
 		 	$("#date_range").val(date_range);
 		 	var phone = $(this).attr('phone');
@@ -143,6 +149,10 @@ include 'views/admin/common/header.php';
 			var bank_account = $(this).attr('bank_account');
 			$("#bank_account").val(bank_account);
 		});
+		$(".delete").on("click",function(){
+			var id = $(this).attr('key');
+			$('#id').val(id);
+		});	
 	})	
 </script>
 <!-- /#page-wrapper -->

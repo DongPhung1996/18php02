@@ -2,10 +2,9 @@
 require_once './model/admin_model.php';
 class AdminController {
 	function handleRequest() {
-		$controller = isset($_GET['controller'])?$_GET['controller']:'users';
-		$action     = isset($_GET['action'])?$_GET['action']:'list_info_user';
-		if ($controller == 'users') {
-			session_start();
+		$controller = isset($_GET['controller']) ? $_GET['controller'] : 'admin';
+		$action     = isset($_GET['action']) ? $_GET['action'] : 'list_info_user';
+		if ($controller == 'admin') {
 			switch ($action) {
 				//start process account
 				case 'list_account':
@@ -47,7 +46,7 @@ class AdminController {
 							$_SESSION['add'] = "Add success!";				
 							$result    = $userModel->addAccount($username, $email ,$password, 2);
 							if($result) {
-								$this->redirectPage('admin.php?controller=users&action=list_account');
+								$this->redirectPage('admin.php?controller=admin&action=list_account');
 							}	
 						}																						
 					}
@@ -99,7 +98,7 @@ class AdminController {
 							$_SESSION['edit'] = "Edit Success!";
 							$result = $userModel->editAccount($id, $_POST['username'], $_POST['email'], $_POST['role']);
 							if($result) {
-								$this->redirectPage('admin.php?controller=users&action=list_account');
+								$this->redirectPage('admin.php?controller=admin&action=list_account');
 							}	
 						}																		
 					}								
@@ -113,7 +112,7 @@ class AdminController {
 						$data = $userModel->deleteAccountById($id);
 						if ($data) {
 							$_SESSION['success'] = "Delete Success";
-							$this->redirectPage('admin.php?controller=users&action=list_account');
+							$this->redirectPage('admin.php?controller=admin&action=list_account');
 						}
 					}				
 					break;	
@@ -147,7 +146,7 @@ class AdminController {
 						} else {
 							$error['id_card'] = $userModel->verifyDataInformation($_POST,"id_card")
 											? "IdCard đã tồn tại!"
-											: $continue = false ;
+											: $continue = false;
 						}
 					 
 						if (isset($_POST['date_range']) && $_POST['date_range'] == '') {
@@ -160,7 +159,7 @@ class AdminController {
 						} else {
 							$error['phone'] = $userModel->verifyDataInformation($_POST,"phone")
 											?  "Phone đã tồn tại!"
-											: null ;
+											: $continue = flase;
 						}						
 						//email
 						$email      = $_POST['email'];
@@ -173,7 +172,7 @@ class AdminController {
 							if ($continue) {
 								$error['email'] = $userModel->verifyDataInformation($_POST,"email")
 											?  "email đã tồn tại!"
-											: null ;
+											: $continue = false;
 							}	
 						}	
 						//skype
@@ -194,7 +193,7 @@ class AdminController {
 						} else {
 							$error['passport_no'] = $userModel->verifyDataInformation($_POST,"passport_no")
 											?  "passport_no đã tồn tại!"
-											: null ;
+											: $continue = false;
 						}						
 						//passport date
 						if (isset($_POST['passport_date']) && $_POST['passport_date'] == '') {
@@ -210,7 +209,7 @@ class AdminController {
 						} else {
 							 $error['number_of_insurrance'] = $userModel->verifyDataInformation($_POST,"number_of_insurrance")
 											?  "number_of_insurrance đã tồn tại!"
-											: null ;
+											: $continue = false;
 						}
 						//date_range_isurrance
 						if (isset($_POST['date_range_insurrance']) && $_POST['date_range_insurrance'] == '') {
@@ -226,13 +225,13 @@ class AdminController {
 						} else {
 							$error['bank_account'] = $userModel->verifyDataInformation($_POST,"bank_account")
 											?  "bank_account đã tồn tại!"
-											: null ;
+											: $continue = false;
 						}	
 						if (!$error) {			
 							$_SESSION['add'] = "Add success!";				
 							$result    = $userModel->addInfoUser($_POST['name'], $_POST['gender'], $_POST['date_of_birth'], $_POST['id_card'], $_POST['date_range'], $_POST['phone'], $_POST['email'], $_POST['skype'], $_POST['address'], $_POST['nationality'], $_POST['maried'], $_POST['passport_no'], $_POST['passport_date'], $_POST['passport_where'], $_POST['number_of_insurrance'], $_POST['date_range_insurrance'], $_POST['issued_by'], $_POST['bank_account']);
 							if($result) {
-								$this->redirectPage('admin.php?controller=users&action=list_info_user');
+								$this->redirectPage('admin.php?controller=admin&action=list_info_user');
 							}	
 						}		
 					}	
@@ -261,12 +260,12 @@ class AdminController {
 							$error['id_card'] = "Bạn chưa nhập số cmnd!";
 						} else {
 
-							// foreach ($data2 as $list) {
-							// 	if ($_POST['id_card'] == $list['id_card'] && $id != $list['id']) {
-							// 		$data['id_card']  = $list['id_card'];
-							// 		$error['id_card'] = "Số cmnd đã tồn tại!";
-							// 	}
-							// }
+							foreach ($data2 as $list) {
+								if ($_POST['id_card'] == $list['id_card'] && $id != $list['id']) {
+									$data['id_card']  = $list['id_card'];
+									$error['id_card'] = "Số cmnd đã tồn tại!";
+								}
+							}
 						}
 						//phone
 						if (isset($_POST['phone']) && $_POST['phone'] == '') {
@@ -360,7 +359,7 @@ class AdminController {
 							$_SESSION['edit_info_user'] = "Edit infomation personal Success!";
 							$result = $userModel->editInfoUser($id, $_POST['name'], $_POST['gender'], $_POST['date_of_birth'], $_POST['id_card'], $_POST['date_range'], $_POST['phone'], $_POST['email'], $_POST['skype'], $_POST['address'], $_POST['nationality'], $_POST['maried'], $_POST['passport_no'], $_POST['passport_date'], $_POST['passport_where'], $_POST['number_of_insurrance'], $_POST['date_range_insurrance'], $_POST['issued_by'], $_POST['bank_account']);
 							if($result) {
-								$this->redirectPage('admin.php?controller=users&action=list_info_user');
+								$this->redirectPage('admin.php?controller=admin&action=list_info_user');
 							}	
 						}																		
 					}	
@@ -372,7 +371,7 @@ class AdminController {
 					if ($id) {
 						$data = $userModel->deleteInfoUserById($id);
 						if ($data) {
-							$this->redirectPage('admin.php?controller=users&action=list_info_user');
+							$this->redirectPage('admin.php?controller=admin&action=list_info_user');
 						}
 					}				
 					break;	
@@ -382,6 +381,8 @@ class AdminController {
 				case 'list_insurrance':
 					$userModel = new AdminModel();
 					$data 	   = $userModel->listInsurrance();
+					$dataResident = $userModel->listInformationResident();
+					$dataClinic = $userModel->listRegisterClinic();
 					include 'views/admin/users/insurrance/list_insurrance.php';
 					break;
 				case 'delete_insurrance':
@@ -390,7 +391,7 @@ class AdminController {
 					if ($id) {
 						$data = $userModel->deleteInsurranceById($id);
 						if ($data) {
-							$this->redirectPage('admin.php?controller=users&action=list_insurrance');
+							$this->redirectPage('admin.php?controller=admin&action=list_insurrance');
 						}
 					}				
 					break;	
@@ -408,7 +409,7 @@ class AdminController {
 					if ($id) {
 						$data = $userModel->deleteInsurranceById($id);
 						if ($data) {
-							$this->redirectPage('admin.php?controller=users&action=list_experience');
+							$this->redirectPage('admin.php?controller=admin&action=list_experience');
 						}
 					}				
 					break;	
@@ -426,7 +427,7 @@ class AdminController {
 					if ($id) {
 						$data = $userModel->deleteContractById($id);
 						if ($data) {
-							$this->redirectPage('admin.php?controller=users&action=list_contract');
+							$this->redirectPage('admin.php?controller=admin&action=list_contract');
 						}
 					}				
 					break;			
@@ -445,7 +446,7 @@ class AdminController {
 					if ($id) {
 						$data = $userModel->deleteContractById($id);
 						if ($data) {
-							$this->redirectPage('admin.php?controller=users&action=skills');
+							$this->redirectPage('admin.php?controller=admin&action=skills');
 						}
 					}				
 					break;		

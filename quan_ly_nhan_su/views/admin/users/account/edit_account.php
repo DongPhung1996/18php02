@@ -11,7 +11,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form action="admin.php?controller=users&action=edit_account" role="form" method="post">
+                                    <form action="admin.php?controller=admin&action=edit_account" role="form" method="post">
                                         <div class="form-group">
                                             <label>Username</label>
                                             <input type="text" name="username" class="form-control" value="<?php echo $data['username'];?>">
@@ -25,8 +25,8 @@
 <!--                                    <div class="form-group">
                                             <label>Role</label>
                                             <select name="role" class="form-control">
-                                                <option value="1" <?php echo $data['role'] == 1 ? 'selected' : '' ?> >Admin</option>
-                                                <option value="2" <?php echo $data['role'] == 2 ? 'selected' : '' ?> >User</option>
+                                                <option value="1" <?php //echo $data['role'] == 1 ? 'selected' : '' ?> >Admin</option>
+                                                <option value="2" <?php //echo $data['role'] == 2 ? 'selected' : '' ?> >User</option>
                                             </select>                 
                                         </div> -->
                                         <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
