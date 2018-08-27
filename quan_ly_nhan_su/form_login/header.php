@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>My Manager</title>
+    <title>Trang quản lý</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">

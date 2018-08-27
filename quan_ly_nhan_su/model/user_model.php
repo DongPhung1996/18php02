@@ -56,6 +56,25 @@ class UserModel extends ConnectDB{
 		$sql = "SELECT * FROM insurrance_book WHERE id_account=".$id;
 		return mysqli_query($this->conn, $sql);
 	}
+
+	function getInsurranceById($id) {
+		$sql = "SELECT * FROM insurrance_book WHERE id=".$id;
+		$result = $this->conn->query($sql);
+    	return $result->fetch_assoc(); 
+	}
+
+	function editInsurrance($id, $name, $date_of_birth, $gender, $check_insurrance_book, $place_of_birth_certificate, $registed_residence_address) {
+		$sql = "UPDATE insurrance_book
+				SET name = '$name',
+					date_of_birth = '$date_of_birth',
+					gender = '$gender',
+					check_insurrance_book = $check_insurrance_book,
+					place_of_birth_certificate = '$place_of_birth_certificate',
+					registed_residence_address = '$registed_residence_address'		
+				WHERE id = $id";
+		return mysqli_query($this->conn, $sql);
+	}
+
 	//End function insurrance
 
 	//Function Contract

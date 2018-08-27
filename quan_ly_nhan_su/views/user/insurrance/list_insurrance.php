@@ -20,12 +20,10 @@ include 'views/user/common/header.php';
 							              <th>STT</th>
 							              <th>Họ và tên</th>
 							              <th>Ngày sinh</th>
+                                          <th>Giới tính</th>
 							              <th>Bảo hiểm đã cấp</th>
-							              <th>Giới tính</th>
-							              <th>Nơi cấp giấy khai sinh</th>          
-                                          <th>Thông tin sổ hộ khẩu</th> 
-                                          <th>Đăng ký nơi khám bệnh</th>
-                                          <th>Địa chỉ đăng ký hộ khẩu</th>
+							              <th>Nơi cấp giấy khai sinh</th>    
+                                          <th>Địa chỉ đăng ký sổ hộ khẩu</th>      
 							            </tr>
 							          </thead>
 							          <tbody>
@@ -35,12 +33,10 @@ include 'views/user/common/header.php';
 									              <td><?php echo $stt++?></td>
 									              <td><?php echo $list["name"]?></td>
 									              <td><?php echo $list["date_of_birth"]?></td>
-									              <td><?php echo $list["check_insurrance_book"]?></td>
-									              <td><?php echo $list["gender"]?></td>
+                                                  <td><?php echo ($list['gender'] == 1) ? "Nam" : "Nữ" ?></td>
+									              <td><?php echo ($list["check_insurrance_book"] == 1) ? "Rồi" : "Chưa" ?></td>
 									              <td><?php echo $list["place_of_birth_certificate"]?></td>
-                                                  <td><?php echo $list["registed_residence_address"]?></td>
-									              <td><a class="btn btn-default">Chi tiết</a></td>
-									              <td><a class="btn btn-default">Chi tiết</a></td>
+                                                  <td><?php echo $list["registed_residence_address"] ?></td>
 									           </tr>
 									      <?php  } ?>
 							          </tbody>
@@ -49,7 +45,9 @@ include 'views/user/common/header.php';
                             </div>
                             <!-- /.row (nested) -->
                             <div align="center">
-                            	<a class="btn btn-primary" href="#">Cập nhật</a>
+                            	<a class="btn btn-primary" href=<?php echo "user.php?controller=user&action=edit_insurrance&id=".$list['id']?>>
+                                    Cập nhật
+                                </a>
                             </div>
                         </div>
                         <!-- /.panel-body -->

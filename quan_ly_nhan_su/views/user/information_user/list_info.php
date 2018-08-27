@@ -42,7 +42,7 @@ include 'views/user/common/header.php';
 									      <?php foreach ($data as $list) { ?>
 									          <tr>
 									              <td><?php echo $stt++?></td>
-									              <td ><?php echo $list["name"]?></td>
+									              <td><?php echo $list["name"]?></td>
 									              <td><?php echo $list["date_of_birth"]?></td>
 									              <td><?php echo $list["id_card"]?></td>
 									              <td><?php echo $list["date_range"]?></td>

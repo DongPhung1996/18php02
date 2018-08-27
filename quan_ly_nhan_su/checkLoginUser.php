@@ -21,6 +21,12 @@ class User extends ConnectDB{
         $result = mysqli_query($this->conn, $sql);
         return mysqli_fetch_assoc($result);
     }
+
+    public function checkUserName($id) {
+        $sql = "SELECT username FROM account WHERE id = '$id' ";
+        $result = mysqli_query($this->conn, $sql);
+        return mysqli_fetch_assoc($result);
+    }
 }
 
 ?>

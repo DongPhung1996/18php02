@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2018 at 04:58 AM
+-- Generation Time: Aug 08, 2018 at 05:37 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -41,29 +41,11 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `role`, `username`, `email`, `password`) VALUES
-(30, 2, 'immortals0402', 'dongphung19226@gmail.com', '22bef35b1021f4c210e7299f1d8ecd15'),
-(32, 2, 'dongphung1994', 'dongphung196123@gmail.com', '136682f94d670301c295eeae80947519'),
-(33, 2, 'dong2321', 'dongphung1992@gmail.com', 'af454ad07c93bd6e9ca8d01134b8adc7');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id`, `username`, `email`, `password`) VALUES
-(1, 'dong1234', 'dongphung1996@gmail.com', 'cee435f21198dc608510df2e61ee438a');
+(21, 2, 'dong12343', 'dongphung19996@gmail.com', 'b0067595050ea222bba3eb9054d0dccb'),
+(22, 2, 'dongphung199', 'dongphung19896@gmail.com', '51700f1e7d66ef0922e5350e6da2f136'),
+(23, 2, 'dong223123', 'dongphung19226@gmail.com', '7c96053e681f16e90aaefd33566ed1fc'),
+(24, 1, '4444', 'dongphung199643434@gmail.com', '19c5209c26f519cf04aabfd91dc2c95b'),
+(25, 2, 'immortals0402', 'phong1234@gmail.com', 'e919fa7f54ef5892792d9aa0d2f3ce7c');
 
 -- --------------------------------------------------------
 
@@ -100,7 +82,6 @@ CREATE TABLE `certificate` (
 
 CREATE TABLE `experience` (
   `id` int(11) NOT NULL,
-  `id_account` int(45) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `address_work` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `time_work` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -113,33 +94,9 @@ CREATE TABLE `experience` (
 -- Dumping data for table `experience`
 --
 
-INSERT INTO `experience` (`id`, `id_account`, `name`, `address_work`, `time_work`, `language_work`, `DB`, `technology`) VALUES
-(1, 32, 'đồng', 'SDC Da Nang', '1 nam', 'C++, Javascript, PHP', 'MySQL', 'Laravel, AngularJS'),
-(2, 33, 'Hoang', 'FPT Company', '2 nam', 'PHP', 'MySQL', 'Laravel, Wordpress');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `fort`
---
-
-CREATE TABLE `fort` (
-  `id` int(11) NOT NULL,
-  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `type_of_contract` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `seniority` int(11) NOT NULL,
-  `check_asset` int(1) NOT NULL,
-  `date_off` date NOT NULL,
-  `reason_off` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `check_isurrance` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `fort`
---
-
-INSERT INTO `fort` (`id`, `name`, `type_of_contract`, `seniority`, `check_asset`, `date_off`, `reason_off`, `check_isurrance`) VALUES
-(2, 'Phùng Thành Vinh', 'Dài hạn', 3, 2, '2018-09-30', 'Đi nước ngoài', 1);
+INSERT INTO `experience` (`id`, `name`, `address_work`, `time_work`, `language_work`, `DB`, `technology`) VALUES
+(1, 'dong', 'SDC Da Nang', '1 nam', 'C++, Javascript, PHP', 'MySQL', 'Laravel, AngularJS'),
+(2, 'Hoang', 'FPT Company', '2 nam', 'PHP', 'MySQL', 'Laravel');
 
 -- --------------------------------------------------------
 
@@ -149,7 +106,6 @@ INSERT INTO `fort` (`id`, `name`, `type_of_contract`, `seniority`, `check_asset`
 
 CREATE TABLE `infomationn_personal` (
   `id` int(11) NOT NULL,
-  `id_account` int(45) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `gender` int(1) NOT NULL,
   `date_of_birth` date NOT NULL,
@@ -174,8 +130,9 @@ CREATE TABLE `infomationn_personal` (
 -- Dumping data for table `infomationn_personal`
 --
 
-INSERT INTO `infomationn_personal` (`id`, `id_account`, `name`, `gender`, `date_of_birth`, `id_card`, `date_range`, `phone`, `email`, `skype`, `address`, `nationality`, `maried`, `passport_no`, `passport_date`, `passport_where`, `number_of_insurrance`, `date_range_insurrance`, `issued_by`, `bank_account`) VALUES
-(7, 33, 'Trần Quốc Toàn', 1, '2000-08-02', '23333', '2012-12-14', '01658777233', 'dongphung1999@gmail.com', 'Immortals', 'Quảng Nam', 'Việt Nam', 1, '12313', '2018-01-01', 'Đà Nẵng', '202', '2017-08-01', 'SDC Đà Nẵng', '12312312');
+INSERT INTO `infomationn_personal` (`id`, `name`, `gender`, `date_of_birth`, `id_card`, `date_range`, `phone`, `email`, `skype`, `address`, `nationality`, `maried`, `passport_no`, `passport_date`, `passport_where`, `number_of_insurrance`, `date_range_insurrance`, `issued_by`, `bank_account`) VALUES
+(5, 'đồng', 1, '2000-08-15', '195623123', '2012-12-14', '01658777234', 'dongphung1996@gmail.com', 'Dong Phung', 'quảng bình', 'việt nam', 0, '12343123', '2018-01-01', 'đà nẵng', '19', '2018-08-15', 'SDC Da Nang', '1231231'),
+(6, 'Phùng Thành Đồng', 1, '2018-08-01', '12354333', '2012-12-14', '01658777233', 'dongphung196@gmail.com', 'Immortals', 'Đà Nẵng', 'việt nam', 0, '12343123', '2018-01-01', 'Đà Nẵng', '20', '2017-08-01', 'SDC Đà Nẵng', '072047534');
 
 -- --------------------------------------------------------
 
@@ -197,13 +154,6 @@ CREATE TABLE `information_residence` (
   `note` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `information_residence`
---
-
-INSERT INTO `information_residence` (`id`, `name`, `host`, `id_residence`, `date_of_birth`, `gender`, `issued_by`, `address`, `relationship`, `id_card`, `note`) VALUES
-(1, 'Phùng Thành Đồng', 'ThànhVinh', '1234', '2018-08-09', 1, 'Quảng Bình', 'Quảng Bình', 'Con trai', '12354333', 'Ghi chú');
-
 -- --------------------------------------------------------
 
 --
@@ -212,7 +162,6 @@ INSERT INTO `information_residence` (`id`, `name`, `host`, `id_residence`, `date
 
 CREATE TABLE `insurrance_book` (
   `id` int(11) NOT NULL,
-  `id_account` int(45) NOT NULL,
   `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `date_of_birth` date NOT NULL,
   `check_insurrance_book` int(1) NOT NULL,
@@ -226,8 +175,8 @@ CREATE TABLE `insurrance_book` (
 -- Dumping data for table `insurrance_book`
 --
 
-INSERT INTO `insurrance_book` (`id`, `id_account`, `name`, `date_of_birth`, `check_insurrance_book`, `number_of_insurrance`, `gender`, `place_of_birth_certificate`, `registed_residence_address`) VALUES
-(3, 33, 'Phùng Thành Đồng', '1997-03-04', 0, '21', 1, 'Vinh', 'Đà Nẵng');
+INSERT INTO `insurrance_book` (`id`, `name`, `date_of_birth`, `check_insurrance_book`, `number_of_insurrance`, `gender`, `place_of_birth_certificate`, `registed_residence_address`) VALUES
+(3, 'Phùng Thành Đồng', '1997-03-04', 0, '21', 1, 'Vinh', 'Đà Nẵng');
 
 -- --------------------------------------------------------
 
@@ -237,7 +186,6 @@ INSERT INTO `insurrance_book` (`id`, `id_account`, `name`, `date_of_birth`, `che
 
 CREATE TABLE `labol_contract` (
   `id` int(11) NOT NULL,
-  `id_account` int(45) NOT NULL,
   `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `part` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `type_of_contract` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -255,8 +203,8 @@ CREATE TABLE `labol_contract` (
 -- Dumping data for table `labol_contract`
 --
 
-INSERT INTO `labol_contract` (`id`, `id_account`, `name`, `part`, `type_of_contract`, `role`, `employed_code`, `rank`, `level`, `salary`, `date_start_contract`, `date_end_contract`, `bonus`) VALUES
-(2, 33, 'Phùng Thành Đồng', 'Manager', 'Dài hạn', 2, '1231', 'leader', 'junior', '2000$', '2018-01-18', '2018-09-15', '2000$');
+INSERT INTO `labol_contract` (`id`, `name`, `part`, `type_of_contract`, `role`, `employed_code`, `rank`, `level`, `salary`, `date_start_contract`, `date_end_contract`, `bonus`) VALUES
+(2, 'Phùng Thành Vinh', 'Coder', 'Dài hạn', 2, '1231', 'leader', 'senior', '2000$', '2018-01-18', '2018-09-15', '200$');
 
 -- --------------------------------------------------------
 
@@ -272,13 +220,6 @@ CREATE TABLE `register_for_the_clinic` (
   `address_examination` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `register_for_the_clinic`
---
-
-INSERT INTO `register_for_the_clinic` (`id`, `city_of_province`, `district_or_town`, `hospital`, `address_examination`) VALUES
-(1, 'Đà Nẵng', 'Quận Cẩm Lệ', '199 Bộ Công An', '199 Bộ Công An');
-
 -- --------------------------------------------------------
 
 --
@@ -287,7 +228,6 @@ INSERT INTO `register_for_the_clinic` (`id`, `city_of_province`, `district_or_to
 
 CREATE TABLE `skill` (
   `id` int(11) NOT NULL,
-  `id_account` int(45) NOT NULL,
   `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `soft_skill` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `language_work` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -302,9 +242,9 @@ CREATE TABLE `skill` (
 -- Dumping data for table `skill`
 --
 
-INSERT INTO `skill` (`id`, `id_account`, `name`, `soft_skill`, `language_work`, `level_language`, `DB`, `level_DB`, `technology`, `level_technology`) VALUES
-(1, 32, 'Phùng Thành Đồng', 'Tiếng anh', 'C#, Javascript', 3, 'MySQL, SQLserver', 3, 'VueJS, ASP.NET', 4),
-(2, 33, 'Mai Thành Vinh', 'Tiếng Anh, Tiếng Hàn', 'Java, HTML5', 4, 'SQLserver', 4, 'Spring, Hibermate', 5);
+INSERT INTO `skill` (`id`, `name`, `soft_skill`, `language_work`, `level_language`, `DB`, `level_DB`, `technology`, `level_technology`) VALUES
+(1, 'Phùng Thành Đồng', 'Tiếng anh', 'C#, Javascript', 3, 'MySQL, SQLserver', 3, 'VueJS, ASP.NET', 4),
+(2, 'Mai Thành Vinh', 'Tiếng Anh, Tiếng Hàn', 'Java, HTML5', 4, 'SQLserver', 4, 'Spring, Hibermate', 4);
 
 --
 -- Indexes for dumped tables
@@ -314,12 +254,6 @@ INSERT INTO `skill` (`id`, `id_account`, `name`, `soft_skill`, `language_work`, 
 -- Indexes for table `account`
 --
 ALTER TABLE `account`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -338,12 +272,6 @@ ALTER TABLE `certificate`
 -- Indexes for table `experience`
 --
 ALTER TABLE `experience`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `fort`
---
-ALTER TABLE `fort`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -390,12 +318,7 @@ ALTER TABLE `skill`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `apply_for_leave`
 --
@@ -412,20 +335,15 @@ ALTER TABLE `certificate`
 ALTER TABLE `experience`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `fort`
---
-ALTER TABLE `fort`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
 -- AUTO_INCREMENT for table `infomationn_personal`
 --
 ALTER TABLE `infomationn_personal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `information_residence`
 --
 ALTER TABLE `information_residence`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `insurrance_book`
 --
@@ -440,7 +358,7 @@ ALTER TABLE `labol_contract`
 -- AUTO_INCREMENT for table `register_for_the_clinic`
 --
 ALTER TABLE `register_for_the_clinic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `skill`
 --

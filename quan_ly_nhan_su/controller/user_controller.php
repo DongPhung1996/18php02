@@ -148,7 +148,41 @@ class UserController {
 					$data 	   = $userModel->listInsurranceById($_SESSION['id']);
 					include 'views/user/insurrance/list_insurrance.php';
 					break;
+				case 'edit_insurrance':
+					$userModel  = new UserModel();
+					$id = isset($_GET['id']) ? $_GET['id'] : $_POST['id'] ;		
+					$data = $userModel->getInsurranceById($id);	
+					if (!$data) {
+						echo 'No connection Database!'; exit();
+					}
+					if (isset($_POST['edit_insurrance'])) {
+						$error = array();
+						//name
+						if (isset($_POST['name']) && $_POST['name'] == '') {
+							$data['name']  = '';
+							$error['name'] = "Bạn chưa nhập tên!";
+						}
+						//place_of_birth_certificate
+						if (isset($_POST['place_of_birth_certificate']) && $_POST['place_of_birth_certificate'] == '') {
+							$data['place_of_birth_certificate']  = '';
+							$error['place_of_birth_certificate'] = "Bạn chưa nhập nơi cấp giấy khai sinh!";
+						}
+						//registed_residence_address
+						if (isset($_POST['registed_residence_address']) && $_POST['registed_residence_address'] == '') {
+							$data['registed_residence_address']  = '';
+							$error['registed_residence_address'] = "Bạn chưa nhập nơi đăng ký hộ khẩu!";
+						}
 
+						if (!$error) {					
+							$_SESSION['edit_info_user'] = "Edit contract Success!";
+							$result = $userModel->editInsurrance($id, $_POST['name'], $_POST['date_of_birth'], $_POST['gender'], $_POST['check_insurrance_book'], $_POST['place_of_birth_certificate'], $_POST['registed_residence_address']);
+							if($result) {
+								$this->redirectPage('user.php?controller=user&action=list_insurrance');
+							}	
+						}				
+					}
+					include 'views/user/insurrance/edit_insurrance.php';	
+					break;		
 				//end process insurrance
 				
 
@@ -224,7 +258,7 @@ class UserController {
 
 						if (!$error) {					
 							$_SESSION['edit_info_user'] = "Edit contract Success!";
-							$result = $userModel->editContract($id, $_POST['name'], $_POST['part'], $_POST['type_of_contract'], $_POST['role'], $_POST['employed_code'], $_POST['rank'], $_POST['level'], $_POST['salary'], $_POST['date_start_contract'], $_POST['date_end_contract'], $_POST['bonus']);
+							$result = $userModel->editInsurrance($id, $_POST['name'], $_POST['date_of_birth'], $_POST['gender'], $_POST['check_insurrance_book'], $_POST['place_of_birth_certificate'], $_POST['registed_residence_address']);
 							if($result) {
 								$this->redirectPage('user.php?controller=user&action=list_contract');
 							}	

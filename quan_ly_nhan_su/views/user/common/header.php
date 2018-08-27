@@ -61,6 +61,9 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <label style="margin-left: 5px;">Name:</label>
+                            <span style="margin-left: 5px;"><?php echo $_SESSION['name']?></span></li>
                         <li><a href="logout_user.php"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
                         </li>
                     </ul>
@@ -95,8 +98,20 @@
                                     <a href="user.php?controller=user&action=list_info_user">Thông tin cá nhân</a>
                                 </li>
                                 <li>
-                                    <a href="user.php?controller=user&action=list_insurrance">Bảo hiểm xã hội</a>
+                                    <a href="#">Bảo hiểm</a>
+                                    <ul class="nav nav-second-level">
+                                        <li>
+                                            <a href="user.php?controller=user&action=list_insurrance">Thông tin bảo hiểm</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Thông tin sổ hộ khẩu</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Đăng ký nơi khám bệnh</a>
+                                        </li>
+                                    </ul>
                                 </li>
+                                
                                 <li>
                                     <a href="user.php?controller=user&action=list_contract">Hợp đồng lao động</a>
                                 </li>
