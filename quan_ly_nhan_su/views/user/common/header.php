@@ -11,6 +11,7 @@
     <meta name="author" content="">
 
     <title>Trang quản lý</title>
+    <link rel="icon" href="views/images.png" type="image/x-icon">
     <!-- Bootstrap Core CSS -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
 
@@ -62,8 +63,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                            <label style="margin-left: 5px;">Name:</label>
-                            <span style="margin-left: 5px;"><?php echo $_SESSION['name']?></span></li>
+                            <label style="margin-left: 15px;">Name:</label>
+                            <span style="margin-left: 0px;"><?php echo $_SESSION['name']?></span></li>
                         <li><a href="logout_user.php"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
                         </li>
                     </ul>
@@ -98,16 +99,16 @@
                                     <a href="user.php?controller=user&action=list_info_user">Thông tin cá nhân</a>
                                 </li>
                                 <li>
-                                    <a href="#">Bảo hiểm</a>
+                                    <a href="#">Bảo hiểm <span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
                                         <li>
                                             <a href="user.php?controller=user&action=list_insurrance">Thông tin bảo hiểm</a>
                                         </li>
                                         <li>
-                                            <a href="#">Thông tin sổ hộ khẩu</a>
+                                            <a href="user.php?controller=user&action=list_info_residence">Thông tin sổ hộ khẩu</a>
                                         </li>
                                         <li>
-                                            <a href="#">Đăng ký nơi khám bệnh</a>
+                                            <a href="user.php?controller=user&action=list_clinic">Nơi khám bệnh</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -149,4 +150,5 @@
             <!-- /.navbar-static-side -->
         </nav>
     </div>    
+
    

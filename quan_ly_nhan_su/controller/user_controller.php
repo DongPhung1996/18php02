@@ -1,5 +1,4 @@
 <?php 
-session_start();
 require_once './model/user_model.php';
 class UserController {
 	function handleRequest() {
@@ -185,6 +184,21 @@ class UserController {
 					break;		
 				//end process insurrance
 				
+				//start processing 
+				case 'list_info_residence':
+					$userModel = new UserModel();
+					$data 	   = $userModel->listResidenceById($_SESSION['id']);
+					include 'views/user/insurrance/infomation_residence/list_info_residence.php';
+					break;	
+				//end process 
+
+				//start processing 
+				case 'list_clinic':
+					$userModel = new UserModel();
+					$data 	   = $userModel->listClinicById($_SESSION['id']);
+					include 'views/user/insurrance/register_clinic/list_clinic.php';
+					break;	
+				//end process 	
 
 				//start processing contract	
 				case 'list_contract':

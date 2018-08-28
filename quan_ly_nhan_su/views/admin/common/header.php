@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>Trang quản lý</title>
-
+    <link rel="icon" href="views/images.png" type="image/x-icon">
     <!-- Bootstrap Core CSS -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
 

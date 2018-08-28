@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <title>My Manager</title>
-
+    
     <!-- Bootstrap Core CSS -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,7 +25,7 @@
 
     <!-- Custom Fonts -->
     <link href="public/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

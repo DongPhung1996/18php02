@@ -24,11 +24,11 @@
         }
 
         if (!$error) {     
-            session_start(); 
+            session_start();
             $_SESSION['login'] = "Login Success!";
             header('Location: admin.php');   
         }
-        
+
     } 
     
  ?>                       

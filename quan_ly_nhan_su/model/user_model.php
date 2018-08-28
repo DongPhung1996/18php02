@@ -77,6 +77,20 @@ class UserModel extends ConnectDB{
 
 	//End function insurrance
 
+	//functionn infomation residence
+	function listResidenceById($id) {
+		$sql = "SELECT * FROM information_residence WHERE id_account=".$id;
+		return mysqli_query($this->conn, $sql);
+	}
+	//end function information residence
+
+	//functionn register clinic
+	function listClinicById($id) {
+		$sql = "SELECT * FROM register_for_the_clinic WHERE id_account=".$id;
+		return mysqli_query($this->conn, $sql);
+	}
+	//end function register clinic
+
 	//Function Contract
 	function listContract() {
 		$sql = "SELECT * FROM labol_contract";

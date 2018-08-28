@@ -11,9 +11,6 @@ include 'views/admin/common/header.php';
         <div>
         	<div class="row">
                 <div class="col-lg-12">
-                    <?php if (isset($_SESSION['maintain'])) { ?> 
-			            <input type="hidden" value=" <?php echo $_SESSION['maintain'];  ?>"> 
-			        <?php } ?>
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row">
